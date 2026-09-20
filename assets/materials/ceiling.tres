@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cmfnktlikxj5i"]
+
+[ext_resource type="Texture2D" uid="uid://bg8ve38tyb25q" path="res://assets/textures/SchoolHouse/CeilingTextures/Ceiling.png" id="1_necjr"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_necjr")
+texture_filter = 0

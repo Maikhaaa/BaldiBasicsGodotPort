@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dyycw2prhuok3"]
+
+[ext_resource type="Script" uid="uid://bpl442upwx6th" path="res://scripts/player/player_controller.cs" id="1_niuxy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xhp5c"]
+radius = 0.475
+
+[node name="Player" type="CharacterBody3D" unique_id=358682472]
+script = ExtResource("1_niuxy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=529004980]
+shape = SubResource("CapsuleShape3D_xhp5c")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1112540920]
