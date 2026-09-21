@@ -1,14 +1,26 @@
 [gd_scene format=3 uid="uid://dyycw2prhuok3"]
 
-[ext_resource type="Script" uid="uid://bpl442upwx6th" path="res://scripts/player/player_controller.cs" id="1_niuxy"]
+[ext_resource type="Script" uid="uid://bpl442upwx6th" path="res://scripts/player/PlayerController.cs" id="1_niuxy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xhp5c"]
-radius = 0.475
+radius = 1.9
+height = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4tk3"]
+shading_mode = 0
+albedo_color = Color(1, 0.49411765, 0, 0.4392157)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_xhp5c"]
+radius = 1.9
+height = 10.0
 
 [node name="Player" type="CharacterBody3D" unique_id=358682472]
 script = ExtResource("1_niuxy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=529004980]
 shape = SubResource("CapsuleShape3D_xhp5c")
+debug_color = Color(1, 0.5372549, 0, 1)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1112540920]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1980300687]
+material_override = SubResource("StandardMaterial3D_v4tk3")
+mesh = SubResource("CapsuleMesh_xhp5c")

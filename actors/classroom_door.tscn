@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cdne1mf3qk7c4"]
+
+[ext_resource type="Material" uid="uid://bemx8sknnjv4a" path="res://assets/materials/schoolhouse/wall_thin.tres" id="1_0ejhk"]
+[ext_resource type="Script" uid="uid://bwop74im87euw" path="res://scripts/classroom-door/ClassroomDoor.cs" id="1_qmddb"]
+[ext_resource type="Texture2D" uid="uid://ckf0xwla7g3sl" path="res://assets/textures/school/door_textures/classroom_door.png" id="2_qmddb"]
+[ext_resource type="AudioStream" uid="uid://bvpopa6wfujxx" path="res://assets/sounds/sounds/Doors/door_open.wav" id="4_afoq7"]
+[ext_resource type="AudioStream" uid="uid://ckli5pkn6slya" path="res://assets/sounds/sounds/Doors/door_close.wav" id="5_8x4jv"]
+[ext_resource type="Script" uid="uid://dvgx3g6csde5p" path="res://scripts/modules/ClickObjectModule.cs" id="6_8x4jv"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_pb2jd"]
+size = Vector2(5, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xhp5c"]
+size = Vector3(0.001, 10, 5)
+
+[node name="ClassroomDoor" type="Node3D" unique_id=771899290 node_paths=PackedStringArray("DoorCollider", "Cooldown", "Door", "ClickModule", "OpenSound", "CloseSound")]
+script = ExtResource("1_qmddb")
+DoorCollider = NodePath("Door/CollisionShape3D")
+Cooldown = NodePath("Cooldown")
+Door = NodePath("Sprite3D")
+ClickModule = NodePath("ClickObjectModule")
+OpenSound = NodePath("OpenSound")
+CloseSound = NodePath("CloseSound")
+
+[node name="Wall381" type="MeshInstance3D" parent="." unique_id=1213010850]
+transform = Transform3D(-7.4309366e-07, 0, 1, 0, 1, 0, -1, 0, -7.4309366e-07, 0, 5, -2.5)
+material_override = ExtResource("1_0ejhk")
+mesh = SubResource("QuadMesh_pb2jd")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=804786571]
+transform = Transform3D(-1.7073668e-07, 0, 1, 0, 3.906, 0, -3.906, 0, -4.371139e-08, 0, 5, 2.5)
+texture_filter = 0
+texture = ExtResource("2_qmddb")
+hframes = 2
+
+[node name="Wall" type="StaticBody3D" parent="." unique_id=1977600987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall" unique_id=178365642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 2.5)
+shape = SubResource("BoxShape3D_xhp5c")
+
+[node name="Door" type="StaticBody3D" parent="." unique_id=2047284883]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door" unique_id=209592243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 2.5)
+shape = SubResource("BoxShape3D_xhp5c")
+
+[node name="OpenSound" type="AudioStreamPlayer3D" parent="." unique_id=238310287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 2.4928868)
+stream = ExtResource("4_afoq7")
+
+[node name="CloseSound" type="AudioStreamPlayer3D" parent="." unique_id=1025979837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 2.4928868)
+stream = ExtResource("5_8x4jv")
+
+[node name="Cooldown" type="Timer" parent="." unique_id=708915458]
+wait_time = 3.0
+one_shot = true
+
+[node name="ClickObjectModule" type="RayCast3D" parent="." unique_id=886002929 node_paths=PackedStringArray("ClickableObject")]
+script = ExtResource("6_8x4jv")
+MyEnumCurrent = 1
+ClickableObject = NodePath("../Door")
+metadata/_custom_type_script = "uid://dvgx3g6csde5p"

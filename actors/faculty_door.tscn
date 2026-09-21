@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cyycmcwlivvod"]
+
+[ext_resource type="PackedScene" uid="uid://cdne1mf3qk7c4" path="res://actors/classroom_door.tscn" id="1_nyplw"]
+[ext_resource type="Texture2D" uid="uid://cpulxad30jlcy" path="res://assets/textures/school/door_textures/faculty_door.png" id="2_i8fmy"]
+
+[node name="FacultyDoor" unique_id=771899290 instance=ExtResource("1_nyplw")]
+
+[node name="Sprite3D" parent="." index="1" unique_id=804786571]
+texture = ExtResource("2_i8fmy")

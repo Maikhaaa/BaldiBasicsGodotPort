@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://dr5wm4rjqkjjo"]
-
-[ext_resource type="Texture2D" uid="uid://dytn8lphwmxbe" path="res://assets/textures/SchoolHouse/WallTextures/WhiteBrickWall.png" id="1_kg0oo"]
-
-[resource]
-shading_mode = 0
-albedo_texture = ExtResource("1_kg0oo")
-texture_filter = 0

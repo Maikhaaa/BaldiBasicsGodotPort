@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bp38bwahctn78"
+path="res://.godot/imported/quiet noise loop.wav-937ef7627ef6da5bf51f671f96e2a9bc.sample"
+
+[deps]
+
+source_file="res://assets/sounds/sounds/FinalMode/quiet noise loop.wav"
+dest_files=["res://.godot/imported/quiet noise loop.wav-937ef7627ef6da5bf51f671f96e2a9bc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

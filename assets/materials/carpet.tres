@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://b8tudbfyfiux0"]
-
-[ext_resource type="Texture2D" uid="uid://f6ojrvmi1kl" path="res://assets/textures/SchoolHouse/FloorTextures/Carpet.png" id="1_7y3n2"]
-
-[resource]
-shading_mode = 0
-albedo_texture = ExtResource("1_7y3n2")
-uv1_scale = Vector3(2, 2, 2)
-texture_filter = 0

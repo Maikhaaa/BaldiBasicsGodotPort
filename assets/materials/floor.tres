@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://chs6yyg0mt5q7"]
-
-[ext_resource type="Texture2D" uid="uid://d1geb1glfoiwa" path="res://assets/textures/SchoolHouse/FloorTextures/TileFloor.png" id="1_7nsbm"]
-
-[resource]
-shading_mode = 0
-albedo_texture = ExtResource("1_7nsbm")
-uv1_scale = Vector3(2, 2, 2)
-texture_filter = 0

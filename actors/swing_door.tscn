@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://h5ivk5sbk7i7"]
+
+[ext_resource type="Script" uid="uid://bwop74im87euw" path="res://scripts/classroom-door/ClassroomDoor.cs" id="1_j8pt3"]
+[ext_resource type="Texture2D" uid="uid://byacarx24ajmm" path="res://assets/textures/school/door_textures/swing_door.png" id="2_tiegf"]
+[ext_resource type="AudioStream" uid="uid://cqkjkgpm0bkcn" path="res://assets/sounds/sounds/Doors/swingdoor_open.wav" id="3_1756r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xhp5c"]
+size = Vector3(0.001, 10, 10)
+
+[node name="SwingDoor" type="Node3D" unique_id=771899290 node_paths=PackedStringArray("DoorCollider", "Cooldown", "Door", "OpenSound")]
+script = ExtResource("1_j8pt3")
+DoorCollider = NodePath("Door/CollisionShape3D")
+Cooldown = NodePath("Cooldown")
+Door = NodePath("Sprite3D")
+OpenSound = NodePath("OpenSound")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=804786571]
+transform = Transform3D(-1.7073668e-07, 0, 1, 0, 3.906, 0, -3.906, 0, -4.371139e-08, 0, 5, 0)
+texture_filter = 0
+texture = ExtResource("2_tiegf")
+hframes = 3
+
+[node name="Door" type="StaticBody3D" parent="." unique_id=2047284883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door" unique_id=209592243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 5)
+shape = SubResource("BoxShape3D_xhp5c")
+
+[node name="OpenSound" type="AudioStreamPlayer3D" parent="." unique_id=238310287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+stream = ExtResource("3_1756r")
+
+[node name="Cooldown" type="Timer" parent="." unique_id=708915458]
+wait_time = 3.0
+one_shot = true

@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dj16clflgslcd"]
+
+[ext_resource type="Material" uid="uid://b8tudbfyfiux0" path="res://assets/materials/schoolhouse/carpet.tres" id="1_gynki"]
+[ext_resource type="Material" uid="uid://dr5wm4rjqkjjo" path="res://assets/materials/schoolhouse/wall.tres" id="2_n5cpo"]
+[ext_resource type="Material" uid="uid://cmfnktlikxj5i" path="res://assets/materials/schoolhouse/ceiling.tres" id="3_n5cpo"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_xhp5c"]
+size = Vector2(10, 10)
+
+[sub_resource type="QuadMesh" id="QuadMesh_g1q31"]
+flip_faces = true
+size = Vector2(10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xhp5c"]
+size = Vector3(0, 10, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n5cpo"]
+size = Vector3(10, 10, 0.001)
+
+[node name="JanitorsCloset" type="Node3D" unique_id=2128009818]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Floor" type="Node3D" parent="." unique_id=555399521]
+
+[node name="Carpet" type="MeshInstance3D" parent="Floor" unique_id=1113401425]
+transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 3.8146973e-06, 3.1832315e-12, 0)
+material_override = ExtResource("1_gynki")
+mesh = SubResource("QuadMesh_xhp5c")
+
+[node name="Carpet2" type="MeshInstance3D" parent="Floor" unique_id=383563396]
+transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 7.6293945e-06, 3.1832315e-12, -10)
+material_override = ExtResource("1_gynki")
+mesh = SubResource("QuadMesh_xhp5c")
+
+[node name="Walls" type="Node3D" parent="." unique_id=1619704320]
+
+[node name="Wall" type="MeshInstance3D" parent="Walls" unique_id=1398005096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -15)
+material_override = ExtResource("2_n5cpo")
+mesh = SubResource("QuadMesh_xhp5c")
+
+[node name="Wall2" type="MeshInstance3D" parent="Walls" unique_id=796472383]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 5, 0)
+material_override = ExtResource("2_n5cpo")
+mesh = SubResource("QuadMesh_xhp5c")
+
+[node name="Wall3" type="MeshInstance3D" parent="Walls" unique_id=586597809]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 5, -10)
+material_override = ExtResource("2_n5cpo")
+mesh = SubResource("QuadMesh_xhp5c")
+
+[node name="Wall4" type="MeshInstance3D" parent="Walls" unique_id=1130329527]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 5, 5, -10)
+material_override = ExtResource("2_n5cpo")
+mesh = SubResource("QuadMesh_xhp5c")
+
+[node name="Wall5" type="MeshInstance3D" parent="Walls" unique_id=342846627]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 5, 5, 0)
+material_override = ExtResource("2_n5cpo")
+mesh = SubResource("QuadMesh_xhp5c")
+
+[node name="Tile374" type="MeshInstance3D" parent="." unique_id=1384097704]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 4.371138e-07, 10, -9.999998)
+material_override = ExtResource("3_n5cpo")
+mesh = SubResource("QuadMesh_g1q31")
+
+[node name="Tile375" type="MeshInstance3D" parent="." unique_id=690828235]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -8.337286e-14, 10, 1.9073486e-06)
+material_override = ExtResource("3_n5cpo")
+mesh = SubResource("QuadMesh_g1q31")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1512118022]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=938182422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5, -5)
+shape = SubResource("BoxShape3D_xhp5c")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1949190306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 5, -5)
+shape = SubResource("BoxShape3D_xhp5c")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=598240361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.769953e-08, 5, -14.9995)
+shape = SubResource("BoxShape3D_n5cpo")

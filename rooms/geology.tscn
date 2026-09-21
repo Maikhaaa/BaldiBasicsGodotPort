@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://msxdl03qsagg"]
 
-[ext_resource type="Material" uid="uid://b8tudbfyfiux0" path="res://assets/materials/carpet.tres" id="1_fol1m"]
-[ext_resource type="Material" uid="uid://dr5wm4rjqkjjo" path="res://assets/materials/wall.tres" id="2_tc5vn"]
-[ext_resource type="Material" uid="uid://cmfnktlikxj5i" path="res://assets/materials/ceiling.tres" id="3_rbr0q"]
+[ext_resource type="Material" uid="uid://b8tudbfyfiux0" path="res://assets/materials/schoolhouse/carpet.tres" id="1_fol1m"]
+[ext_resource type="Material" uid="uid://dr5wm4rjqkjjo" path="res://assets/materials/schoolhouse/wall.tres" id="2_tc5vn"]
+[ext_resource type="Material" uid="uid://cmfnktlikxj5i" path="res://assets/materials/schoolhouse/ceiling.tres" id="3_rbr0q"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_xhp5c"]
 size = Vector2(10, 10)
@@ -241,11 +241,6 @@ mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall394" type="MeshInstance3D" parent="Walls" unique_id=1595806636]
 transform = Transform3D(-1, 0, -7.8680506e-07, 0, 1, 0, 7.8680506e-07, 0, -1, 19.999994, 5, 45)
-material_override = ExtResource("2_tc5vn")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall395" type="MeshInstance3D" parent="Walls" unique_id=339202838]
-transform = Transform3D(-1, 0, -7.8680506e-07, 0, 1, 0, 7.8680506e-07, 0, -1, 9.999994, 5, 45)
 material_override = ExtResource("2_tc5vn")
 mesh = SubResource("QuadMesh_xhp5c")
 

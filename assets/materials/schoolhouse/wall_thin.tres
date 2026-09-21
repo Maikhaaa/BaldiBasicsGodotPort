@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bemx8sknnjv4a"]
+
+[ext_resource type="Texture2D" uid="uid://dytn8lphwmxbe" path="res://assets/textures/school/WallTextures/WhiteBrickWall.png" id="1_mcmpq"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_mcmpq")
+uv1_scale = Vector3(0.5, 1, 1)
+texture_filter = 0

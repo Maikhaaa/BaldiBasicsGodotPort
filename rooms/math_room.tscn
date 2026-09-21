@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://k5o4jrifv65o"]
 
-[ext_resource type="Material" uid="uid://b8tudbfyfiux0" path="res://assets/materials/carpet.tres" id="1_22ua2"]
-[ext_resource type="Material" uid="uid://dr5wm4rjqkjjo" path="res://assets/materials/wall.tres" id="2_57k6l"]
-[ext_resource type="Material" uid="uid://cmfnktlikxj5i" path="res://assets/materials/ceiling.tres" id="3_ay54a"]
+[ext_resource type="Material" uid="uid://b8tudbfyfiux0" path="res://assets/materials/schoolhouse/carpet.tres" id="1_22ua2"]
+[ext_resource type="Material" uid="uid://dr5wm4rjqkjjo" path="res://assets/materials/schoolhouse/wall.tres" id="2_57k6l"]
+[ext_resource type="Material" uid="uid://cmfnktlikxj5i" path="res://assets/materials/schoolhouse/ceiling.tres" id="3_ay54a"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_xhp5c"]
 size = Vector2(10, 10)
