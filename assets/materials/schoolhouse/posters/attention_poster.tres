@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b38c12usfm66j"]
+
+[ext_resource type="Texture2D" uid="uid://u1w56j3epnfd" path="res://assets/textures/schoolhouse/WallTextures/Posters/SchoolAttention.png" id="1_ab8q3"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_ab8q3")
+texture_filter = 0

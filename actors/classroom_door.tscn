@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cdne1mf3qk7c4"]
 
 [ext_resource type="Material" uid="uid://bemx8sknnjv4a" path="res://assets/materials/schoolhouse/wall_thin.tres" id="1_0ejhk"]
-[ext_resource type="Script" uid="uid://bwop74im87euw" path="res://scripts/classroom-door/ClassroomDoor.cs" id="1_qmddb"]
-[ext_resource type="Texture2D" uid="uid://ckf0xwla7g3sl" path="res://assets/textures/school/door_textures/classroom_door.png" id="2_qmddb"]
+[ext_resource type="Script" uid="uid://bwop74im87euw" path="res://scripts/doors/Door.cs" id="1_qmddb"]
+[ext_resource type="Texture2D" uid="uid://ckf0xwla7g3sl" path="res://assets/textures/schoolhouse/door_textures/classroom_door.png" id="2_qmddb"]
 [ext_resource type="AudioStream" uid="uid://bvpopa6wfujxx" path="res://assets/sounds/sounds/Doors/door_open.wav" id="4_afoq7"]
 [ext_resource type="AudioStream" uid="uid://ckli5pkn6slya" path="res://assets/sounds/sounds/Doors/door_close.wav" id="5_8x4jv"]
 [ext_resource type="Script" uid="uid://dvgx3g6csde5p" path="res://scripts/modules/ClickObjectModule.cs" id="6_8x4jv"]
@@ -13,11 +13,15 @@ size = Vector2(5, 10)
 [sub_resource type="BoxShape3D" id="BoxShape3D_xhp5c"]
 size = Vector3(0.001, 10, 5)
 
-[node name="ClassroomDoor" type="Node3D" unique_id=771899290 node_paths=PackedStringArray("DoorCollider", "Cooldown", "Door", "ClickModule", "OpenSound", "CloseSound")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_v4tk3"]
+size = Vector3(0, 10, 5)
+
+[node name="ClassroomDoor" type="Node3D" unique_id=771899290 node_paths=PackedStringArray("DoorCollider", "Cooldown", "DoorIn", "DoorOut", "ClickModule", "OpenSound", "CloseSound")]
 script = ExtResource("1_qmddb")
 DoorCollider = NodePath("Door/CollisionShape3D")
 Cooldown = NodePath("Cooldown")
-Door = NodePath("Sprite3D")
+DoorIn = NodePath("Sprite3D")
+DoorOut = NodePath("Sprite3D2")
 ClickModule = NodePath("ClickObjectModule")
 OpenSound = NodePath("OpenSound")
 CloseSound = NodePath("CloseSound")
@@ -29,6 +33,14 @@ mesh = SubResource("QuadMesh_pb2jd")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=804786571]
 transform = Transform3D(-1.7073668e-07, 0, 1, 0, 3.906, 0, -3.906, 0, -4.371139e-08, 0, 5, 2.5)
+double_sided = false
+texture_filter = 0
+texture = ExtResource("2_qmddb")
+hframes = 2
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=940208183]
+transform = Transform3D(5.1221e-07, 0, -1, 0, 3.906, 0, 3.906, 0, 1.3113416e-07, 0, 5, 2.5)
+double_sided = false
 texture_filter = 0
 texture = ExtResource("2_qmddb")
 hframes = 2
@@ -46,20 +58,35 @@ shape = SubResource("BoxShape3D_xhp5c")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 2.5)
 shape = SubResource("BoxShape3D_xhp5c")
 
+[node name="Area3D" type="Area3D" parent="." unique_id=189039102]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1999152956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 2.5)
+shape = SubResource("BoxShape3D_v4tk3")
+
 [node name="OpenSound" type="AudioStreamPlayer3D" parent="." unique_id=238310287]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 2.4928868)
 stream = ExtResource("4_afoq7")
+attenuation_model = 3
+unit_size = 5.0
 
 [node name="CloseSound" type="AudioStreamPlayer3D" parent="." unique_id=1025979837]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 2.4928868)
 stream = ExtResource("5_8x4jv")
+attenuation_model = 3
+unit_size = 5.0
 
 [node name="Cooldown" type="Timer" parent="." unique_id=708915458]
 wait_time = 3.0
 one_shot = true
 
 [node name="ClickObjectModule" type="RayCast3D" parent="." unique_id=886002929 node_paths=PackedStringArray("ClickableObject")]
+top_level = true
+target_position = Vector3(0, 0, -15)
+collide_with_areas = true
+collide_with_bodies = false
 script = ExtResource("6_8x4jv")
-MyEnumCurrent = 1
-ClickableObject = NodePath("../Door")
+ButtonIndex = 1
+Length = 15.0
+ClickableObject = NodePath("../Area3D")
 metadata/_custom_type_script = "uid://dvgx3g6csde5p"

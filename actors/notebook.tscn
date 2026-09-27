@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dk7rrnwvsy6mc"]
+
+[ext_resource type="Texture2D" uid="uid://c6pjomhnwe61f" path="res://assets/textures/schoolhouse/PickUps/NotebookSprite.png" id="1_etfwr"]
+[ext_resource type="Script" uid="uid://dvgx3g6csde5p" path="res://scripts/modules/ClickObjectModule.cs" id="2_c6lix"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_etfwr"]
+radius = 1.5
+
+[node name="Notebook" type="Node3D" unique_id=868593174]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=2072015067]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=787085752]
+shape = SubResource("SphereShape3D_etfwr")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1841103155]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+billboard = 1
+texture_filter = 0
+texture = ExtResource("1_etfwr")
+
+[node name="ClickObjectModule" type="RayCast3D" parent="." unique_id=1914553001 node_paths=PackedStringArray("ClickableObject")]
+top_level = true
+target_position = Vector3(0, 0, -10)
+collide_with_areas = true
+collide_with_bodies = false
+script = ExtResource("2_c6lix")
+ClickableObject = NodePath("../Area3D")
+metadata/_custom_type_script = "uid://dvgx3g6csde5p"

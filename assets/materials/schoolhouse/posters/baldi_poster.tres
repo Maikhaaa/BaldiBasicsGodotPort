@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvo8xr4wwmtpr"]
+
+[ext_resource type="Texture2D" uid="uid://d3j4msgyjb6cb" path="res://assets/textures/schoolhouse/WallTextures/Posters/OfficePosters/baldi_poster.png" id="1_swym4"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_swym4")
+texture_filter = 0

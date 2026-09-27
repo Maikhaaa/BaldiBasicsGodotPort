@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://idy2obv204pi"
+path="res://.godot/imported/Chair_Test_Mesh.obj-4f6e09c6d7bbe65e4d29cdfe7de859dd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Chair_Test_Mesh.obj-4f6e09c6d7bbe65e4d29cdfe7de859dd.mesh"]
+
+source_file="res://assets/mesh/objects/Chair_Test_Mesh.obj"
+dest_files=["res://.godot/imported/Chair_Test_Mesh.obj-4f6e09c6d7bbe65e4d29cdfe7de859dd.mesh", "res://.godot/imported/Chair_Test_Mesh.obj-4f6e09c6d7bbe65e4d29cdfe7de859dd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

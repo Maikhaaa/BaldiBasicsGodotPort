@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://behitbfr7s2k0"]
 
-[ext_resource type="Texture2D" uid="uid://d1geb1glfoiwa" path="res://assets/textures/school/FloorTextures/TileFloor.png" id="1_g8no2"]
+[ext_resource type="Texture2D" uid="uid://d1geb1glfoiwa" path="res://assets/textures/schoolhouse/FloorTextures/TileFloor.png" id="1_g8no2"]
 
 [resource]
 shading_mode = 0

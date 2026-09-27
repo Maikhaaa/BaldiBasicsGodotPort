@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://brmkhawhgqqy7"]
+
+[ext_resource type="Texture2D" uid="uid://diw7672wq1nsh" path="res://assets/textures/schoolhouse/WallTextures/Posters/OfficePosters/bully_poster.png" id="1_umffh"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_umffh")
+texture_filter = 0

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bxlv7nls8iq2h"]
+
+[ext_resource type="Texture2D" uid="uid://dgdlq5bgpwrpu" path="res://assets/textures/schoolhouse/chalkboards/Homestar.png" id="1_6d5jn"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_6d5jn")
+texture_filter = 0

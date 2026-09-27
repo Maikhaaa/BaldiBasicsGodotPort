@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ck150l5wgv1v5"]
+
+[ext_resource type="Material" uid="uid://dg0mheet70w0h" path="res://assets/materials/schoolhouse/wood.tres" id="1_p2dte"]
+[ext_resource type="ArrayMesh" uid="uid://dwgcw3pnniq3r" path="res://assets/mesh/SchoolObjects/Desk.obj" id="2_e16go"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wef7w"]
+size = Vector3(10, 3, 4)
+
+[node name="Desk" type="StaticBody3D" unique_id=2084488833]
+
+[node name="Desk" type="MeshInstance3D" parent="." unique_id=716746194]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.5, 0)
+material_override = ExtResource("1_p2dte")
+mesh = ExtResource("2_e16go")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1058637611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_wef7w")

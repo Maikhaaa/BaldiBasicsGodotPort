@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dg0mheet70w0h"]
+
+[ext_resource type="Texture2D" uid="uid://b0xysh0kp3g5u" path="res://assets/textures/schoolhouse/MiscellaneousTextures/wood.png" id="1_m1nce"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_m1nce")
+uv1_scale = Vector3(2, 1, 1)
+texture_filter = 0

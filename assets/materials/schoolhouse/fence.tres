@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cq6tcf2ko4ntb"]
 
-[ext_resource type="Texture2D" uid="uid://ihguwxg36rdj" path="res://assets/textures/school/OutsideTextures/fence.png" id="1_aeajw"]
+[ext_resource type="Texture2D" uid="uid://ihguwxg36rdj" path="res://assets/textures/schoolhouse/outsidetextures/fence.png" id="1_aeajw"]
 
 [resource]
 transparency = 1

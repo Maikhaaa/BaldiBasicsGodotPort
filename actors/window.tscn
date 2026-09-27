@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ukamaufpsca6"]
+
+[ext_resource type="Texture2D" uid="uid://dhrpybvwaw7dq" path="res://assets/textures/schoolhouse/WallTextures/Window.png" id="1_akele"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xhp5c"]
+size = Vector3(10, 10, 0)
+
+[node name="Window" type="Node3D" unique_id=64843694]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=78362563]
+transform = Transform3D(3.906, 0, 0, 0, 3.906, 0, 0, 0, 3.906, 0, 5, 0)
+double_sided = false
+texture_filter = 0
+texture = ExtResource("1_akele")
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1007610073]
+transform = Transform3D(-3.906, 0, -5.897896e-07, 0, 3.906, 0, 5.897896e-07, 0, -3.906, 0, 5, 0)
+double_sided = false
+texture_filter = 0
+texture = ExtResource("1_akele")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1574106460]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=706140907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+shape = SubResource("BoxShape3D_xhp5c")

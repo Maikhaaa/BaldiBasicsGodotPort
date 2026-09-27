@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c6nsq4dts3p7l"]
+
+[ext_resource type="Texture2D" uid="uid://b82g7vj11m4e" path="res://assets/textures/schoolhouse/chalkboards/99.png" id="1_bfxeh"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_bfxeh")
+texture_filter = 0

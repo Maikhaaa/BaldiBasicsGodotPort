@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b82vg4yi3vxqx"]
+
+[ext_resource type="Texture2D" uid="uid://nmds1hvpmmqr" path="res://assets/textures/schoolhouse/WallTextures/Posters/school_rules_poster.png" id="1_jccnk"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_jccnk")
+texture_filter = 0

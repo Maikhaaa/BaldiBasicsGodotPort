@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c43toqlymadwm"]
+
+[ext_resource type="Material" uid="uid://dg0mheet70w0h" path="res://assets/materials/schoolhouse/wood.tres" id="1_f1vyl"]
+[ext_resource type="ArrayMesh" uid="uid://cl0r2dj554axk" path="res://assets/mesh/SchoolObjects/ChairB.obj" id="2_kllm8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vhvfm"]
+size = Vector3(2, 5, 2)
+
+[node name="Chair" type="StaticBody3D" unique_id=257118483]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 0, 0, 0)
+
+[node name="Chair" type="MeshInstance3D" parent="." unique_id=383190141]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0)
+material_override = ExtResource("1_f1vyl")
+mesh = ExtResource("2_kllm8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=277886742]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_vhvfm")

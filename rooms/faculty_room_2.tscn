@@ -7,6 +7,21 @@
 [sub_resource type="QuadMesh" id="QuadMesh_xhp5c"]
 size = Vector2(10, 10)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kg7ya"]
+size = Vector3(10, 10, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ym5co"]
+size = Vector3(70, 10, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0jg8f"]
+size = Vector3(50, 10, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_23877"]
+size = Vector3(0, 10, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kflci"]
+size = Vector3(0, 10, 20)
+
 [node name="FacultyRoom2" type="Node3D" unique_id=985019762]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
@@ -317,72 +332,72 @@ material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling4" type="MeshInstance3D" parent="Ceiling" unique_id=167167499]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.999994, 9.999999, 30)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 9.999994, 9.999999, 30)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling5" type="MeshInstance3D" parent="Ceiling" unique_id=181509512]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -30.000004, 9.999998, 40)
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -30.000004, 9.999998, 40)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling6" type="MeshInstance3D" parent="Ceiling" unique_id=1701269098]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -30.000004, 9.999999, 30)
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -30.000004, 9.999999, 30)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling7" type="MeshInstance3D" parent="Ceiling" unique_id=1275520688]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 19.999994, 9.999999, 29.999998)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 19.999994, 9.999999, 29.999998)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling8" type="MeshInstance3D" parent="Ceiling" unique_id=1316241282]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 29.999992, 9.999999, 30)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 29.999992, 9.999999, 30)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling9" type="MeshInstance3D" parent="Ceiling" unique_id=98282774]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.999992, 10, 20)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 9.999992, 10, 20)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling10" type="MeshInstance3D" parent="Ceiling" unique_id=1235047787]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 19.999994, 10, 19.999996)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 19.999994, 10, 19.999996)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling11" type="MeshInstance3D" parent="Ceiling" unique_id=606574011]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 29.999992, 10, 19.999998)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 29.999992, 10, 19.999998)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling12" type="MeshInstance3D" parent="Ceiling" unique_id=2009612318]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.999992, 10.000001, 10)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 9.999992, 10.000001, 10)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling13" type="MeshInstance3D" parent="Ceiling" unique_id=64014511]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -29.999996, 10, 20)
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -29.999996, 10, 20)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling14" type="MeshInstance3D" parent="Ceiling" unique_id=178412540]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -29.999996, 10.000001, 10)
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -29.999996, 10.000001, 10)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling15" type="MeshInstance3D" parent="Ceiling" unique_id=11281766]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 19.999992, 10.000001, 9.999998)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 19.999992, 10.000001, 9.999998)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling16" type="MeshInstance3D" parent="Ceiling" unique_id=1965802680]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 29.999992, 10.000001, 9.999997)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 29.999992, 10.000001, 9.999997)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling17" type="MeshInstance3D" parent="Ceiling" unique_id=519584322]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.999994, 10.000002, -9.139507e-07)
+transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, 9.999994, 10.000002, -9.139507e-07)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
@@ -392,22 +407,22 @@ material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling22" type="MeshInstance3D" parent="Ceiling" unique_id=368036750]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -3.8146973e-06, 9.999999, 30)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -3.8146973e-06, 9.999999, 30)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling23" type="MeshInstance3D" parent="Ceiling" unique_id=577607978]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -7.6293945e-06, 10, 20)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -7.6293945e-06, 10, 20)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling24" type="MeshInstance3D" parent="Ceiling" unique_id=1383684353]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -7.6293945e-06, 10.000001, 10)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -7.6293945e-06, 10.000001, 10)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling25" type="MeshInstance3D" parent="Ceiling" unique_id=1118804181]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -7.6293945e-06, 10.000002, 0)
+transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, -7.6293945e-06, 10.000002, 0)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
@@ -417,22 +432,22 @@ material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling27" type="MeshInstance3D" parent="Ceiling" unique_id=126757125]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -10.000004, 9.999999, 30)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -10.000004, 9.999999, 30)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling28" type="MeshInstance3D" parent="Ceiling" unique_id=211241666]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -10.000008, 10, 20)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -10.000008, 10, 20)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling29" type="MeshInstance3D" parent="Ceiling" unique_id=1965441134]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -10.000008, 10.000001, 10)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -10.000008, 10.000001, 10)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling30" type="MeshInstance3D" parent="Ceiling" unique_id=1887087014]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -10.000008, 10.000002, -3.8146973e-06)
+transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, -10.000008, 10.000002, -3.8146973e-06)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
@@ -442,36 +457,62 @@ material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling32" type="MeshInstance3D" parent="Ceiling" unique_id=1006405659]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -20, 9.999999, 29.999992)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -20, 9.999999, 29.999992)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling33" type="MeshInstance3D" parent="Ceiling" unique_id=1164810740]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -20, 10, 19.999992)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -20, 10, 19.999992)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling34" type="MeshInstance3D" parent="Ceiling" unique_id=1110343785]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -20, 10.000001, 9.999992)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -20, 10.000001, 9.999992)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling35" type="MeshInstance3D" parent="Ceiling" unique_id=1746366021]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -20, 10.000002, -7.6293945e-06)
+transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, -20, 10.000002, -7.6293945e-06)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling18" type="MeshInstance3D" parent="Ceiling" unique_id=935958838]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -29.999996, 10.000002, -1.1444092e-05)
+transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, -29.999996, 10.000002, -1.1444092e-05)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling19" type="MeshInstance3D" parent="Ceiling" unique_id=124074683]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 19.999994, 10.000002, -9.3383215e-07)
+transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, 19.999994, 10.000002, -9.3383215e-07)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling20" type="MeshInstance3D" parent="Ceiling" unique_id=1241236791]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 29.999992, 10.000002, -1.8477833e-06)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 29.999992, 10.000002, -1.8477833e-06)
 material_override = ExtResource("3_0jg8f")
 mesh = SubResource("QuadMesh_xhp5c")
+
+[node name="Wall" type="StaticBody3D" parent="." unique_id=1313541986]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall" unique_id=1991484292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 5, -5.0000014)
+shape = SubResource("BoxShape3D_kg7ya")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Wall" unique_id=975483687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.966376e-08, 5, 45)
+shape = SubResource("BoxShape3D_ym5co")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Wall" unique_id=1324965447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5, -5)
+shape = SubResource("BoxShape3D_0jg8f")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Wall" unique_id=1174187410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 5, 19.999998)
+shape = SubResource("BoxShape3D_23877")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Wall" unique_id=1135257583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 5, 34.999996)
+shape = SubResource("BoxShape3D_kflci")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Wall" unique_id=1023099577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 5, 4.9999976)
+shape = SubResource("BoxShape3D_kflci")

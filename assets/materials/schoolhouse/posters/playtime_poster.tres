@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dfgr4jnnqrjk0"]
+
+[ext_resource type="Texture2D" uid="uid://bfuccrhui5l1i" path="res://assets/textures/schoolhouse/WallTextures/Posters/OfficePosters/playtime_poster.png" id="1_uoqfy"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_uoqfy")
+texture_filter = 0

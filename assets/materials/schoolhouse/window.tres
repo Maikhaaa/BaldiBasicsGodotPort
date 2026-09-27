@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bsct6nvjo4nvb"]
+
+[ext_resource type="Texture2D" uid="uid://dhrpybvwaw7dq" path="res://assets/textures/schoolhouse/WallTextures/Window.png" id="1_so802"]
+
+[resource]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_so802")
+texture_filter = 0

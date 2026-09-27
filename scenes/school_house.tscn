@@ -7,10 +7,11 @@
 [ext_resource type="Material" uid="uid://chs6yyg0mt5q7" path="res://assets/materials/schoolhouse/floor.tres" id="3_8b7d0"]
 [ext_resource type="AudioStream" uid="uid://8nnavs8h4mbn" path="res://assets/sounds/sounds/Buzz.wav" id="3_l0g4x"]
 [ext_resource type="Material" uid="uid://behitbfr7s2k0" path="res://assets/materials/schoolhouse/floor_dark.tres" id="4_5hmer"]
+[ext_resource type="Material" uid="uid://detvv1icdmqe2" path="res://assets/materials/schoolhouse/what.tres" id="4_45q0c"]
 [ext_resource type="Material" uid="uid://cmfnktlikxj5i" path="res://assets/materials/schoolhouse/ceiling.tres" id="5_5dipq"]
 [ext_resource type="Material" uid="uid://cjdgomyroumv7" path="res://assets/materials/schoolhouse/ceiling_dark.tres" id="7_l0g4x"]
-[ext_resource type="Material" uid="uid://b8tudbfyfiux0" path="res://assets/materials/schoolhouse/carpet.tres" id="8_dnpfl"]
 [ext_resource type="PackedScene" uid="uid://dsqenve07axi6" path="res://rooms/caffeteria.tscn" id="8_l0g4x"]
+[ext_resource type="PackedScene" uid="uid://cf7ss0vm16x1v" path="res://rooms/office.tscn" id="11_0acw8"]
 [ext_resource type="PackedScene" uid="uid://b6hsvahxpnipj" path="res://actors/entrance.tscn" id="11_pwjnd"]
 [ext_resource type="PackedScene" uid="uid://dj16clflgslcd" path="res://rooms/janitors_closet.tscn" id="15_gg8vq"]
 [ext_resource type="PackedScene" uid="uid://dyycw2prhuok3" path="res://actors/player.tscn" id="16_0thes"]
@@ -18,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bxcw4ylslkg47" path="res://rooms/geography_room.tscn" id="18_5xcpo"]
 [ext_resource type="PackedScene" uid="uid://k5o4jrifv65o" path="res://rooms/math_room.tscn" id="19_45q0c"]
 [ext_resource type="PackedScene" uid="uid://msxdl03qsagg" path="res://rooms/geology.tscn" id="20_0acw8"]
+[ext_resource type="PackedScene" uid="uid://ck150l5wgv1v5" path="res://objects/desk.tscn" id="20_74ygv"]
 [ext_resource type="PackedScene" uid="uid://dnm46utehsc3j" path="res://rooms/science_room.tscn" id="21_74ygv"]
 [ext_resource type="PackedScene" uid="uid://xylvikmoo1c7" path="res://rooms/english_room.tscn" id="22_ei6vo"]
 [ext_resource type="PackedScene" uid="uid://cr51u7vkdpxw7" path="res://rooms/history_room.tscn" id="23_ko6cp"]
@@ -27,7 +29,700 @@
 [ext_resource type="PackedScene" uid="uid://h5ivk5sbk7i7" path="res://actors/swing_door.tscn" id="27_apmp5"]
 [ext_resource type="PackedScene" uid="uid://dudpqwcemi6my" path="res://rooms/faculty_room_4.tscn" id="27_dw11q"]
 [ext_resource type="PackedScene" uid="uid://ckvps7jl5twx1" path="res://rooms/faculty_room_5.tscn" id="28_0thes"]
+[ext_resource type="AudioStream" uid="uid://diw6m06tpb2r1" path="res://assets/sounds/music/mus_School.wav" id="29_0thes"]
 [ext_resource type="PackedScene" uid="uid://cyycmcwlivvod" path="res://actors/faculty_door.tscn" id="29_gg8vq"]
+[ext_resource type="PackedScene" uid="uid://dk7rrnwvsy6mc" path="res://actors/notebook.tscn" id="30_0thes"]
+[ext_resource type="Texture2D" uid="uid://cqm3dtwsgkmdh" path="res://assets/textures/characters/Baldi/wave_sheet.png" id="33_0acw8"]
+[ext_resource type="PackedScene" uid="uid://ukamaufpsca6" path="res://actors/window.tscn" id="34_0acw8"]
+[ext_resource type="AudioStream" uid="uid://hs56ibs8pu1a" path="res://assets/sounds/characters/Baldi/BaldiTutor/BAL_Hi.wav" id="34_74ygv"]
+[ext_resource type="PackedScene" uid="uid://dlngjffhadoh5" path="res://actors/pricipal_door.tscn" id="36_ei6vo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74ygv"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(0, 0, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei6vo"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(142, 0, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ko6cp"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(284, 0, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buyi3"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(426, 0, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfnps"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(568, 0, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipou4"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(710, 0, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw11q"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(852, 0, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rh1b5"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(994, 0, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l07oi"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1136, 0, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6wet"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1278, 0, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7jx2"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(0, 256, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0floh"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(142, 256, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xy68x"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(284, 256, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opsg3"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(426, 256, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqdw1"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(568, 256, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kh1qb"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(710, 256, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0r4ym"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(852, 256, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16el1"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(994, 256, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7vto"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1136, 256, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oj2n"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1278, 256, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44kfp"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(0, 512, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqxyu"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(142, 512, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j7ri"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(284, 512, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajdyq"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(426, 512, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wggxy"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(568, 512, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfim1"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(710, 512, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrc4s"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(852, 512, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yw7si"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(994, 512, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fo7o"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1136, 512, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tulw4"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1278, 512, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1q4k"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(0, 768, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x335o"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(142, 768, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwcnp"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(284, 768, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2j3fq"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(426, 768, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2p8b"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(568, 768, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrkad"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(710, 768, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bttef"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(852, 768, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2o0xa"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(994, 768, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5dir"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1136, 768, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwquh"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1278, 768, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhvok"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(0, 1024, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brgg4"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(142, 1024, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xtv8"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(284, 1024, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2quu"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(426, 1024, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7iqer"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(568, 1024, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_056av"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(710, 1024, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chcqi"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(852, 1024, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wenk"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(994, 1024, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3efs"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1136, 1024, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrswk"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1278, 1024, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsfju"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(0, 1280, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ug1p1"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(142, 1280, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1cc2"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(284, 1280, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq1bk"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(426, 1280, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hygss"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(568, 1280, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g55dh"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(710, 1280, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdx3m"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(852, 1280, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eagpu"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(994, 1280, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yppnn"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1136, 1280, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0l1m"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1278, 1280, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okx1q"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(0, 1536, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu4vl"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(142, 1536, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rn5d"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(284, 1536, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfhus"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(426, 1536, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ke0t"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(568, 1536, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jq1w"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(710, 1536, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dyb6"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(852, 1536, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jp2s"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(994, 1536, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0eci"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1136, 1536, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t01g"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1278, 1536, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4sya"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(0, 1792, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67dkx"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(142, 1792, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1f2k"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(284, 1792, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0l7t"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(426, 1792, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwoew"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(568, 1792, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fdoy"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(710, 1792, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvdoe"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(852, 1792, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avqro"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(994, 1792, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3lfx"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1136, 1792, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hf84"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1278, 1792, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38170"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(0, 2048, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nv3il"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(142, 2048, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q02hu"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(284, 2048, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwjjh"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(426, 2048, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikcxt"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(568, 2048, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swqxo"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(710, 2048, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i02k7"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(852, 2048, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jl2pd"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(994, 2048, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovatc"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1136, 2048, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0axhm"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(1278, 2048, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umc1u"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(0, 2304, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs0p8"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(142, 2304, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lonac"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(284, 2304, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bavk5"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(426, 2304, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykj0q"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(568, 2304, 142, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldh8u"]
+atlas = ExtResource("33_0acw8")
+region = Rect2(710, 2304, 142, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xhp5c"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74ygv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei6vo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ko6cp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buyi3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfnps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipou4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw11q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rh1b5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l07oi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6wet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7jx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0floh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xy68x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opsg3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqdw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kh1qb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0r4ym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16el1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7vto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oj2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44kfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqxyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4j7ri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajdyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wggxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfim1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrc4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yw7si")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fo7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tulw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1q4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x335o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwcnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2j3fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2p8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrkad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bttef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2o0xa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5dir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwquh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhvok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brgg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xtv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2quu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7iqer")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_056av")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chcqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wenk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3efs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrswk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsfju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug1p1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1cc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq1bk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hygss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g55dh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdx3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eagpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yppnn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0l1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okx1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu4vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rn5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfhus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ke0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jq1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dyb6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jp2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0eci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t01g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4sya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67dkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1f2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0l7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwoew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fdoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvdoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avqro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3lfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hf84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38170")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nv3il")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q02hu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwjjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikcxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swqxo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i02k7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jl2pd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovatc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0axhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umc1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cs0p8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lonac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bavk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykj0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldh8u")
+}],
+"loop": 0,
+"name": &"wave",
+"speed": 30.0
+}]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xhp5c"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_xhp5c"]
 size = Vector2(10, 10)
@@ -36,7 +731,11 @@ size = Vector2(10, 10)
 flip_faces = true
 size = Vector2(10, 10)
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xhp5c"]
+[sub_resource type="NavigationMesh" id="NavigationMesh_xhp5c"]
+vertices = PackedVector3Array(-8.75, 0.5, -12.5, -11.75, 0.5, -9.75, -12.75, 0.5, -8, -2, 0.5, -8, -2.5, 0.5, -15, -6, 0.5, -14, 2.5, 0.5, -15, 2, 0.5, -8, 9.75, 0.5, -11.75, 6, 0.5, -14, 12.75, 0.5, -8, -14, 0.5, -6, -15, 0.5, -2.5, -8, 0.5, -2, -6.75, 0.5, -4.75, -12.75, 0.5, 8, -2, 0.5, 8, -4.75, 0.5, 6.75, -7.25, 0.5, 4, -14.75, 0.5, 3.75, -8, 0.5, 2, -4.75, 0.5, -6.75, 15, 0.5, -2.5, 14, 0.5, -6, 6.75, 0.5, -4.75, 8, 0.5, -2, 4.75, 0.5, -6.75, 7.25, 0.5, 4, 12.75, 0.5, 8, 14.75, 0.5, 3.75, 8, 0.5, 2, 4.75, 0.5, 6.75, 2, 0.5, 8, -11.75, 0.5, 9.75, -8.75, 0.5, 12.5, -6, 0.5, 14, -2.5, 0.5, 15, 2.5, 0.5, 15, 6, 0.5, 14, 9.75, 0.5, 11.75)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 5), PackedInt32Array(2, 5, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(7, 3, 6), PackedInt32Array(6, 3, 4), PackedInt32Array(9, 8, 6), PackedInt32Array(6, 8, 7), PackedInt32Array(7, 8, 10), PackedInt32Array(11, 2, 12), PackedInt32Array(12, 2, 13), PackedInt32Array(13, 2, 14), PackedInt32Array(17, 16, 15), PackedInt32Array(18, 17, 15), PackedInt32Array(18, 15, 20), PackedInt32Array(20, 15, 19), PackedInt32Array(13, 20, 12), PackedInt32Array(12, 20, 19), PackedInt32Array(21, 2, 3), PackedInt32Array(2, 21, 14), PackedInt32Array(23, 22, 10), PackedInt32Array(10, 22, 25), PackedInt32Array(10, 25, 24), PackedInt32Array(26, 7, 10), PackedInt32Array(24, 26, 10), PackedInt32Array(27, 30, 28), PackedInt32Array(28, 30, 29), PackedInt32Array(25, 22, 30), PackedInt32Array(30, 22, 29), PackedInt32Array(31, 28, 32), PackedInt32Array(28, 31, 27), PackedInt32Array(33, 15, 34), PackedInt32Array(34, 15, 35), PackedInt32Array(35, 15, 36), PackedInt32Array(36, 15, 16), PackedInt32Array(32, 37, 16), PackedInt32Array(16, 37, 36), PackedInt32Array(38, 37, 39), PackedInt32Array(39, 37, 32), PackedInt32Array(39, 32, 28)]
+sample_partition_type = 1
+geometry_parsed_geometry_type = 0
 
 [sub_resource type="Environment" id="Environment_xhp5c"]
 background_mode = 2
@@ -45,50 +744,36 @@ ambient_light_source = 3
 
 [node name="SchoolHouse" type="Node" unique_id=1899710234]
 
-[node name="ClassroomDoor" parent="." unique_id=846577883 instance=ExtResource("1_l0g4x")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -105, 0, 300)
+[node name="Player" parent="." unique_id=358682472 node_paths=PackedStringArray("Camera") instance=ExtResource("16_0thes")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 4, -10)
+collision_layer = 2
+MouseSensitivity = 0.001
+Camera = NodePath("Camera3D")
 
-[node name="ClassroomDoor9" parent="." unique_id=771899290 instance=ExtResource("1_l0g4x")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 115, 0, 270)
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=935283681]
+current = true
+fov = 60.0
 
-[node name="ClassroomDoor2" parent="." unique_id=1222466575 instance=ExtResource("1_l0g4x")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -105, 0, 160)
+[node name="BaldiTutor" type="AnimatedSprite3D" parent="." unique_id=33661372]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 1.25, 4.5, 6)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_xhp5c")
+animation = &"wave"
+autoplay = "wave"
+frame = 95
+frame_progress = 1.0
 
-[node name="ClassroomDoor3" parent="." unique_id=147403756 instance=ExtResource("1_l0g4x")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -5, 0, 30)
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BaldiTutor" unique_id=518364431]
+stream = ExtResource("34_74ygv")
+attenuation_model = 3
+autoplay = true
+bus = &"Sounds"
 
-[node name="ClassroomDoor8" parent="." unique_id=1194255777 instance=ExtResource("1_l0g4x")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -65, 0, 30)
+[node name="FloorCollision" type="StaticBody3D" parent="." unique_id=195680790]
 
-[node name="ClassroomDoor4" parent="." unique_id=479781035 instance=ExtResource("1_l0g4x")]
-transform = Transform3D(-1, 0, -2.6226832e-07, 0, 1, 0, 2.6226832e-07, 0, -1, 5, 0, 20)
-
-[node name="ClassroomDoor5" parent="." unique_id=1325584064 instance=ExtResource("1_l0g4x")]
-transform = Transform3D(3.059797e-07, 0, -1, 0, 1, 0, 1, 0, 3.059797e-07, -20, 0, 125)
-
-[node name="ClassroomDoor6" parent="." unique_id=1084664477 instance=ExtResource("1_l0g4x")]
-transform = Transform3D(3.059797e-07, 0, -1, 0, 1, 0, 1, 0, 3.059797e-07, 30, 0, 235)
-
-[node name="ClassroomDoor7" parent="." unique_id=968652483 instance=ExtResource("1_l0g4x")]
-transform = Transform3D(-1, 0, -2.6226832e-07, 0, 1, 0, 2.6226832e-07, 0, -1, -25, 0, 160)
-
-[node name="FacultyDoor" parent="." unique_id=1095010999 instance=ExtResource("29_gg8vq")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 30, 0, 125)
-
-[node name="FacultyDoor2" parent="." unique_id=814589577 instance=ExtResource("29_gg8vq")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -105, 0, 90)
-
-[node name="FacultyDoor3" parent="." unique_id=1363022471 instance=ExtResource("29_gg8vq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0, 60)
-
-[node name="FacultyDoor4" parent="." unique_id=533143037 instance=ExtResource("29_gg8vq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105, 0, 160)
-
-[node name="FacultyDoor6" parent="." unique_id=112178626 instance=ExtResource("29_gg8vq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 230)
-
-[node name="FacultyDoor5" parent="." unique_id=1491791394 instance=ExtResource("29_gg8vq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 80, 0, 5)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FloorCollision" unique_id=165970037]
+shape = SubResource("WorldBoundaryShape3D_xhp5c")
 
 [node name="Hallways" type="Node3D" parent="." unique_id=98409827]
 
@@ -186,11 +871,6 @@ mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall227" type="MeshInstance3D" parent="Hallways/Walls" unique_id=1064538491]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10, 5, 135)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall228" type="MeshInstance3D" parent="Hallways/Walls" unique_id=1539756963]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 5, 135)
 material_override = ExtResource("1_f3k1l")
 mesh = SubResource("QuadMesh_xhp5c")
 
@@ -449,11 +1129,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -65,
 material_override = ExtResource("1_f3k1l")
 mesh = SubResource("QuadMesh_xhp5c")
 
-[node name="Wall102" type="MeshInstance3D" parent="Hallways/Walls" unique_id=852968144]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -65, 5, 90)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
 [node name="Wall103" type="MeshInstance3D" parent="Hallways/Walls" unique_id=1779084230]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -65, 5, 100)
 material_override = ExtResource("1_f3k1l")
@@ -501,7 +1176,7 @@ mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall212" type="MeshInstance3D" parent="Hallways/Walls" unique_id=1785853166]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -55, 5, 60)
-material_override = ExtResource("1_f3k1l")
+material_override = ExtResource("4_45q0c")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall213" type="MeshInstance3D" parent="Hallways/Walls" unique_id=1565297825]
@@ -1064,18 +1739,8 @@ transform = Transform3D(6.556709e-07, 0, -1, 0, 1, 0, 1, 0, 6.556709e-07, -25, 5
 material_override = ExtResource("1_f3k1l")
 mesh = SubResource("QuadMesh_xhp5c")
 
-[node name="Wall368" type="MeshInstance3D" parent="Hallways/Walls" unique_id=1984926755]
-transform = Transform3D(6.556709e-07, 0, -1, 0, 1, 0, 1, 0, 6.556709e-07, -25, 5, 170)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
 [node name="Wall370" type="MeshInstance3D" parent="Hallways/Walls" unique_id=426773878]
 transform = Transform3D(6.556709e-07, 0, -1, 0, 1, 0, 1, 0, 6.556709e-07, -25, 5, 150)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall371" type="MeshInstance3D" parent="Hallways/Walls" unique_id=299995699]
-transform = Transform3D(6.556709e-07, 0, -1, 0, 1, 0, 1, 0, 6.556709e-07, -25, 5, 140)
 material_override = ExtResource("1_f3k1l")
 mesh = SubResource("QuadMesh_xhp5c")
 
@@ -1221,11 +1886,6 @@ mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall177" type="MeshInstance3D" parent="Hallways/Walls" unique_id=1107934540]
 transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 14.999999, 5, 170)
-material_override = ExtResource("2_egvsf")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall178" type="MeshInstance3D" parent="Hallways/Walls" unique_id=1429422783]
-transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 15, 5, 180)
 material_override = ExtResource("2_egvsf")
 mesh = SubResource("QuadMesh_xhp5c")
 
@@ -2804,7 +3464,7 @@ material_override = ExtResource("5_5dipq")
 mesh = SubResource("QuadMesh_eb6dy")
 
 [node name="Tile181" type="MeshInstance3D" parent="Hallways/Ceiling" unique_id=1690094645]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 10, 10, 0)
+transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 10, 10, 0)
 material_override = ExtResource("5_5dipq")
 mesh = SubResource("QuadMesh_eb6dy")
 
@@ -2819,7 +3479,7 @@ material_override = ExtResource("5_5dipq")
 mesh = SubResource("QuadMesh_eb6dy")
 
 [node name="Tile184" type="MeshInstance3D" parent="Hallways/Ceiling" unique_id=1333178156]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 40, 10, 0)
+transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 40, 10, 0)
 material_override = ExtResource("5_5dipq")
 mesh = SubResource("QuadMesh_eb6dy")
 
@@ -3419,7 +4079,7 @@ material_override = ExtResource("5_5dipq")
 mesh = SubResource("QuadMesh_eb6dy")
 
 [node name="Tile324" type="MeshInstance3D" parent="Hallways/Ceiling" unique_id=371141429]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 10, 40)
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0, 10, 40)
 material_override = ExtResource("5_5dipq")
 mesh = SubResource("QuadMesh_eb6dy")
 
@@ -3430,11 +4090,6 @@ mesh = SubResource("QuadMesh_eb6dy")
 
 [node name="Tile326" type="MeshInstance3D" parent="Hallways/Ceiling" unique_id=1729361159]
 transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 0, 10, 20)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_eb6dy")
-
-[node name="Tile327" type="MeshInstance3D" parent="Hallways/Ceiling" unique_id=794015110]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 10, 10)
 material_override = ExtResource("5_5dipq")
 mesh = SubResource("QuadMesh_eb6dy")
 
@@ -3683,347 +4338,60 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -60,
 material_override = ExtResource("5_5dipq")
 mesh = SubResource("QuadMesh_eb6dy")
 
+[node name="Tile327" type="MeshInstance3D" parent="Hallways" unique_id=794015110]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0, 10, 10)
+material_override = ExtResource("5_5dipq")
+mesh = SubResource("QuadMesh_eb6dy")
+
 [node name="Caffeteria" parent="." unique_id=717130006 instance=ExtResource("8_l0g4x")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -10, 0, 250)
 
-[node name="Office" type="Node3D" parent="." unique_id=727860227]
+[node name="Office" parent="." unique_id=863022713 instance=ExtResource("11_0acw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 140)
-
-[node name="Floor" type="Node3D" parent="Office" unique_id=245878506]
-
-[node name="Carpet" type="MeshInstance3D" parent="Office/Floor" unique_id=1407977267]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.999994, 3.1832315e-12, -9.139507e-07)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet2" type="MeshInstance3D" parent="Office/Floor" unique_id=1201781348]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 19.999994, 3.1832315e-12, -9.3383215e-07)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet3" type="MeshInstance3D" parent="Office/Floor" unique_id=928354033]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 29.999992, 3.1832315e-12, -1.8477833e-06)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet4" type="MeshInstance3D" parent="Office/Floor" unique_id=1065948902]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.999992, 3.1832315e-12, 10)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet5" type="MeshInstance3D" parent="Office/Floor" unique_id=408604565]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -5.722046e-06, 3.1832315e-12, 2.5579538e-13)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet6" type="MeshInstance3D" parent="Office/Floor" unique_id=1722709925]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -5.722046e-06, 3.1832315e-12, 10)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet7" type="MeshInstance3D" parent="Office/Floor" unique_id=1275253354]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 19.999992, 3.1832315e-12, 9.999998)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet8" type="MeshInstance3D" parent="Office/Floor" unique_id=142513453]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 29.999992, 3.1832315e-12, 9.999997)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet9" type="MeshInstance3D" parent="Office/Floor" unique_id=375286525]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.999992, 3.1832315e-12, 20)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet10" type="MeshInstance3D" parent="Office/Floor" unique_id=1420558996]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 19.999994, 3.1832315e-12, 19.999996)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet11" type="MeshInstance3D" parent="Office/Floor" unique_id=1444346326]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 29.999992, 3.1832315e-12, 19.999998)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet12" type="MeshInstance3D" parent="Office/Floor" unique_id=1821080055]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.999994, 3.1832315e-12, 30)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet13" type="MeshInstance3D" parent="Office/Floor" unique_id=948564354]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6.67572e-06, 3.1832315e-12, 20)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet14" type="MeshInstance3D" parent="Office/Floor" unique_id=391699428]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -5.722046e-06, 3.1832315e-12, 30)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet15" type="MeshInstance3D" parent="Office/Floor" unique_id=109368154]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 19.999994, 3.1832315e-12, 29.999998)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet16" type="MeshInstance3D" parent="Office/Floor" unique_id=1667811116]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 29.999992, 3.1832315e-12, 30)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet17" type="MeshInstance3D" parent="Office/Floor" unique_id=857605033]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9.999994, 3.1832315e-12, 40)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet18" type="MeshInstance3D" parent="Office/Floor" unique_id=2051171186]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -5.722046e-06, 3.1832315e-12, 40)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet19" type="MeshInstance3D" parent="Office/Floor" unique_id=687581525]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 19.999994, 3.1832315e-12, 40)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Carpet20" type="MeshInstance3D" parent="Office/Floor" unique_id=1329732271]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 29.999992, 3.1832315e-12, 40)
-material_override = ExtResource("8_dnpfl")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Walls" type="Node3D" parent="Office" unique_id=499763848]
-
-[node name="Wall383" type="MeshInstance3D" parent="Office/Walls" unique_id=1973553589]
-transform = Transform3D(-7.4309366e-07, 0, 1, 0, 1, 0, -1, 0, -7.4309366e-07, -5.0000086, 5, 10)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall384" type="MeshInstance3D" parent="Office/Walls" unique_id=2076959726]
-transform = Transform3D(-7.4309366e-07, 0, 1, 0, 1, 0, -1, 0, -7.4309366e-07, -5.000009, 5, 3.9743412e-08)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall385" type="MeshInstance3D" parent="Office/Walls" unique_id=264267853]
-transform = Transform3D(-7.4309366e-07, 0, 1, 0, 1, 0, -1, 0, -7.4309366e-07, -5.0000095, 5, 30)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall387" type="MeshInstance3D" parent="Office/Walls" unique_id=1174364026]
-transform = Transform3D(-7.4309366e-07, 0, 1, 0, 1, 0, -1, 0, -7.4309366e-07, -5.000009, 5, 40)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall388" type="MeshInstance3D" parent="Office/Walls" unique_id=1380585388]
-transform = Transform3D(8.3051646e-07, 0, -1, 0, 1, 0, 1, 0, 8.3051646e-07, 34.999992, 5, 29.999996)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall389" type="MeshInstance3D" parent="Office/Walls" unique_id=807266252]
-transform = Transform3D(8.3051646e-07, 0, -1, 0, 1, 0, 1, 0, 8.3051646e-07, 34.999996, 5, 39.999992)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall393" type="MeshInstance3D" parent="Office/Walls" unique_id=286262063]
-transform = Transform3D(-1, 0, -7.8680506e-07, 0, 1, 0, 7.8680506e-07, 0, -1, 29.999996, 5, 45)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall394" type="MeshInstance3D" parent="Office/Walls" unique_id=1841219318]
-transform = Transform3D(-1, 0, -7.8680506e-07, 0, 1, 0, 7.8680506e-07, 0, -1, 19.999994, 5, 45)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall395" type="MeshInstance3D" parent="Office/Walls" unique_id=1559669682]
-transform = Transform3D(-1, 0, -7.8680506e-07, 0, 1, 0, 7.8680506e-07, 0, -1, 9.999994, 5, 45)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall396" type="MeshInstance3D" parent="Office/Walls" unique_id=1361481635]
-transform = Transform3D(-1, 0, -7.8680506e-07, 0, 1, 0, 7.8680506e-07, 0, -1, -4.7683716e-06, 5, 45)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall397" type="MeshInstance3D" parent="Office/Walls" unique_id=1370295126]
-transform = Transform3D(1, 0, 8.7422785e-07, 0, 1, 0, -8.7422785e-07, 0, 1, -5.722046e-06, 5, -5.0000005)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall398" type="MeshInstance3D" parent="Office/Walls" unique_id=794885433]
-transform = Transform3D(1, 0, 8.7422785e-07, 0, 1, 0, -8.7422785e-07, 0, 1, 9.999994, 5, -5.000001)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall399" type="MeshInstance3D" parent="Office/Walls" unique_id=1686234434]
-transform = Transform3D(1, 0, 8.7422785e-07, 0, 1, 0, -8.7422785e-07, 0, 1, 19.999994, 5, -5.0000014)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall400" type="MeshInstance3D" parent="Office/Walls" unique_id=1488028997]
-transform = Transform3D(1, 0, 8.7422785e-07, 0, 1, 0, -8.7422785e-07, 0, 1, 29.999992, 5, -5.000002)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall390" type="MeshInstance3D" parent="Office/Walls" unique_id=918104945]
-transform = Transform3D(8.3051646e-07, 0, -1, 0, 1, 0, 1, 0, 8.3051646e-07, 34.999992, 5, 9.999998)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall391" type="MeshInstance3D" parent="Office/Walls" unique_id=818120406]
-transform = Transform3D(8.3051646e-07, 0, -1, 0, 1, 0, 1, 0, 8.3051646e-07, 34.999992, 5, -1.8875262e-06)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Wall392" type="MeshInstance3D" parent="Office/Walls" unique_id=1114891579]
-transform = Transform3D(8.3051646e-07, 0, -1, 0, 1, 0, 1, 0, 8.3051646e-07, 34.999992, 5, 19.999998)
-material_override = ExtResource("1_f3k1l")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling" type="Node3D" parent="Office" unique_id=1453872364]
-
-[node name="Ceiling" type="MeshInstance3D" parent="Office/Ceiling" unique_id=1920597195]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.999994, 9.999998, 40)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling2" type="MeshInstance3D" parent="Office/Ceiling" unique_id=502969216]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 19.999994, 9.999998, 40)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling3" type="MeshInstance3D" parent="Office/Ceiling" unique_id=358071865]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 29.999992, 9.999998, 40)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling4" type="MeshInstance3D" parent="Office/Ceiling" unique_id=2028219639]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.999994, 9.999999, 30)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling5" type="MeshInstance3D" parent="Office/Ceiling" unique_id=1174432813]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -5.722046e-06, 9.999998, 40)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling6" type="MeshInstance3D" parent="Office/Ceiling" unique_id=220229378]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -5.722046e-06, 9.999999, 30)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling7" type="MeshInstance3D" parent="Office/Ceiling" unique_id=2061106629]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 19.999994, 9.999999, 29.999998)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling8" type="MeshInstance3D" parent="Office/Ceiling" unique_id=631663648]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 29.999992, 9.999999, 30)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling9" type="MeshInstance3D" parent="Office/Ceiling" unique_id=678096993]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.999992, 10, 20)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling10" type="MeshInstance3D" parent="Office/Ceiling" unique_id=1968932254]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 19.999994, 10, 19.999996)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling11" type="MeshInstance3D" parent="Office/Ceiling" unique_id=586310844]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 29.999992, 10, 19.999998)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling12" type="MeshInstance3D" parent="Office/Ceiling" unique_id=1313620857]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.999992, 10.000001, 10)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling13" type="MeshInstance3D" parent="Office/Ceiling" unique_id=594403195]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -6.67572e-06, 10, 20)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling14" type="MeshInstance3D" parent="Office/Ceiling" unique_id=647592181]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -5.722046e-06, 10.000001, 10)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling15" type="MeshInstance3D" parent="Office/Ceiling" unique_id=430072465]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 19.999992, 10.000001, 9.999998)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling16" type="MeshInstance3D" parent="Office/Ceiling" unique_id=120125919]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 29.999992, 10.000001, 9.999997)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling17" type="MeshInstance3D" parent="Office/Ceiling" unique_id=124856997]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.999994, 10.000002, -9.139507e-07)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling18" type="MeshInstance3D" parent="Office/Ceiling" unique_id=1123353781]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -5.722046e-06, 10.000002, 2.5579538e-13)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling19" type="MeshInstance3D" parent="Office/Ceiling" unique_id=1905980619]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 19.999994, 10.000002, -9.3383215e-07)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Ceiling20" type="MeshInstance3D" parent="Office/Ceiling" unique_id=1304083581]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 29.999992, 10.000002, -1.8477833e-06)
-material_override = ExtResource("5_5dipq")
-mesh = SubResource("QuadMesh_xhp5c")
-
-[node name="Entrance" parent="." unique_id=1158603175 instance=ExtResource("11_pwjnd")]
-
-[node name="Entrance2" parent="." unique_id=728585038 instance=ExtResource("11_pwjnd")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 110, 0, 190)
-
-[node name="Grass28" parent="Entrance2" index="41" unique_id=465071119]
-transform = Transform3D(1.3113416e-07, 1, 1.3113416e-07, -7.1054274e-15, -1.3113416e-07, 1, 1, -1.3113416e-07, -9.28477e-15, 30, 0, -50.000008)
-
-[node name="Grass29" parent="Entrance2" index="42" unique_id=1701998079]
-transform = Transform3D(1.3113416e-07, 1, 1.3113416e-07, -7.1054274e-15, -1.3113416e-07, 1, 1, -1.3113416e-07, -9.28477e-15, 30, 0, -40.000008)
-
-[node name="Grass30" parent="Entrance2" index="43" unique_id=1674714263]
-transform = Transform3D(1.3113416e-07, 1, 1.3113416e-07, -7.1054274e-15, -1.3113416e-07, 1, 1, -1.3113416e-07, -9.28477e-15, 30, 0, -30.000008)
-
-[node name="Grass31" parent="Entrance2" index="44" unique_id=1443887533]
-transform = Transform3D(1.3113416e-07, 1, 1.3113416e-07, -7.1054274e-15, -1.3113416e-07, 1, 1, -1.3113416e-07, -9.28477e-15, 30, 0, -20.000008)
-
-[node name="Entrance3" parent="." unique_id=1819840804 instance=ExtResource("11_pwjnd")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -110, 0, 180)
-
-[node name="Entrance4" parent="." unique_id=377429465 instance=ExtResource("11_pwjnd")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 40, 0, 330)
 
 [node name="JanitorsCloset" parent="." unique_id=2128009818 instance=ExtResource("15_gg8vq")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -70, 0, 30)
 
-[node name="FloorCollision" type="StaticBody3D" parent="." unique_id=195680790]
+[node name="Notebooks" type="Node" parent="." unique_id=1967769748]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="FloorCollision" unique_id=165970037]
-shape = SubResource("WorldBoundaryShape3D_xhp5c")
+[node name="Notebook" parent="Notebooks" unique_id=868593174 instance=ExtResource("30_0thes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 5, 25)
 
-[node name="Player" parent="." unique_id=358682472 node_paths=PackedStringArray("Camera") instance=ExtResource("16_0thes")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 4, -10)
-Speed = 10.0
-MouseSensitivity = 0.1
-Camera = NodePath("Camera3D")
+[node name="Notebook3" parent="Notebooks" unique_id=373763985 instance=ExtResource("30_0thes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 5, 102)
 
-[node name="Camera3D" type="Camera3D" parent="Player" unique_id=935283681]
-current = true
+[node name="Notebook2" parent="Notebooks" unique_id=1092754955 instance=ExtResource("30_0thes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 5, 25)
 
-[node name="Classrooms" type="Node3D" parent="." unique_id=751128373]
+[node name="Entrences" type="Node" parent="." unique_id=1548856215]
+
+[node name="EntranceSouth" parent="Entrences" unique_id=1158603175 instance=ExtResource("11_pwjnd")]
+
+[node name="EntranceWest" parent="Entrences" unique_id=728585038 instance=ExtResource("11_pwjnd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 110, 0, 190)
+
+[node name="Grass28" parent="Entrences/EntranceWest" index="41" unique_id=465071119]
+transform = Transform3D(7.549791e-08, 8.742278e-08, -1, 8.742278e-08, 1, 8.7422784e-08, 1, -8.7422784e-08, 7.54979e-08, 25, 5, -50)
+
+[node name="Grass29" parent="Entrences/EntranceWest" index="42" unique_id=1701998079]
+transform = Transform3D(1.3113416e-07, 1, 1.3113416e-07, -7.1054274e-15, -1.3113416e-07, 1, 1, -1.3113416e-07, -9.28477e-15, 30, 0, -40.000008)
+
+[node name="Grass30" parent="Entrences/EntranceWest" index="43" unique_id=1674714263]
+transform = Transform3D(1.3113416e-07, 1, 1.3113416e-07, -7.1054274e-15, -1.3113416e-07, 1, 1, -1.3113416e-07, -9.28477e-15, 30, 0, -30.000008)
+
+[node name="Grass31" parent="Entrences/EntranceWest" index="44" unique_id=1443887533]
+transform = Transform3D(1.3113416e-07, 1, 1.3113416e-07, -7.1054274e-15, -1.3113416e-07, 1, 1, -1.3113416e-07, -9.28477e-15, 30, 0, -20.000008)
+
+[node name="EntranceEast" parent="Entrences" unique_id=1819840804 instance=ExtResource("11_pwjnd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -110, 0, 180)
+
+[node name="EntranceNorth" parent="Entrences" unique_id=377429465 instance=ExtResource("11_pwjnd")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 40, 0, 330)
+
+[node name="Classrooms" type="Node" parent="." unique_id=1967877879]
 
 [node name="SpellingRoom" parent="Classrooms" unique_id=1951531801 instance=ExtResource("17_pb2jd")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10, 0, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.001263, 0.0025935173, 9.998558)
 
 [node name="GeographyRoom" parent="Classrooms" unique_id=2132593453 instance=ExtResource("18_5xcpo")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -60, 0, 290)
@@ -4043,7 +4411,10 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 
 [node name="HistoryRoom" parent="Classrooms" unique_id=1323784066 instance=ExtResource("23_ko6cp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 0, 250)
 
-[node name="Faculty" type="Node3D" parent="." unique_id=774485282]
+[node name="Desk" parent="Classrooms" unique_id=2084488833 instance=ExtResource("20_74ygv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 8)
+
+[node name="Faculty" type="Node" parent="." unique_id=2069432321]
 
 [node name="FacultyRoom" parent="Faculty" unique_id=435733651 instance=ExtResource("24_buyi3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -60, 0, 220)
@@ -4060,25 +4431,107 @@ transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 70, 
 [node name="FacultyRoom5" parent="Faculty" unique_id=93467030 instance=ExtResource("28_0thes")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -100, 0, 90)
 
-[node name="SwingDoor" parent="." unique_id=1554566880 instance=ExtResource("27_apmp5")]
+[node name="Windows" type="Node" parent="." unique_id=689526046]
+
+[node name="Window" parent="Windows" unique_id=64843694 instance=ExtResource("34_0acw8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25, 0, 170)
+
+[node name="Window2" parent="Windows" unique_id=1609325770 instance=ExtResource("34_0acw8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25, 0, 140)
+
+[node name="Window3" parent="Windows" unique_id=2047113905 instance=ExtResource("34_0acw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 135)
+
+[node name="Window4" parent="Windows" unique_id=1907631332 instance=ExtResource("34_0acw8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15, 0, 180)
+
+[node name="Sprite3D2" parent="Windows/Window4" index="1" unique_id=1007610073]
+modulate = Color(0.47843137, 0.47843137, 0.47843137, 1)
+
+[node name="Window5" parent="Windows" unique_id=978167246 instance=ExtResource("34_0acw8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -65, 0, 90)
+
+[node name="Doors" type="Node" parent="." unique_id=2125153779]
+
+[node name="ClassroomDoor" parent="Doors" unique_id=846577883 instance=ExtResource("1_l0g4x")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -105, 0, 300)
+
+[node name="ClassroomDoor9" parent="Doors" unique_id=771899290 instance=ExtResource("1_l0g4x")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 115, 0, 270)
+
+[node name="ClassroomDoor2" parent="Doors" unique_id=1222466575 instance=ExtResource("1_l0g4x")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -105, 0, 160)
+
+[node name="ClassroomDoor3" parent="Doors" unique_id=147403756 instance=ExtResource("1_l0g4x")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -5, 0, 30)
+
+[node name="ClassroomDoor8" parent="Doors" unique_id=1194255777 instance=ExtResource("1_l0g4x")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -65, 0, 30)
+
+[node name="ClassroomDoor4" parent="Doors" unique_id=479781035 instance=ExtResource("1_l0g4x")]
+transform = Transform3D(-1, 0, -2.6226832e-07, 0, 1, 0, 2.6226832e-07, 0, -1, 5, 0, 20)
+
+[node name="ClassroomDoor5" parent="Doors" unique_id=1325584064 instance=ExtResource("1_l0g4x")]
+transform = Transform3D(3.059797e-07, 0, -1, 0, 1, 0, 1, 0, 3.059797e-07, -20, 0, 125)
+
+[node name="ClassroomDoor6" parent="Doors" unique_id=1084664477 instance=ExtResource("1_l0g4x")]
+transform = Transform3D(3.059797e-07, 0, -1, 0, 1, 0, 1, 0, 3.059797e-07, 30, 0, 235)
+
+[node name="FacultyDoor" parent="Doors" unique_id=1095010999 instance=ExtResource("29_gg8vq")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 30, 0, 125)
+
+[node name="FacultyDoor2" parent="Doors" unique_id=814589577 instance=ExtResource("29_gg8vq")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -105, 0, 90)
+
+[node name="FacultyDoor3" parent="Doors" unique_id=1363022471 instance=ExtResource("29_gg8vq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0, 60)
+
+[node name="FacultyDoor4" parent="Doors" unique_id=533143037 instance=ExtResource("29_gg8vq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105, 0, 160)
+
+[node name="FacultyDoor6" parent="Doors" unique_id=112178626 instance=ExtResource("29_gg8vq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 230)
+
+[node name="FacultyDoor5" parent="Doors" unique_id=1491791394 instance=ExtResource("29_gg8vq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 80, 0, 5)
+
+[node name="SwingDoor" parent="Doors" unique_id=1554566880 instance=ExtResource("27_apmp5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 45)
 
-[node name="SwingDoor5" parent="." unique_id=1226144837 instance=ExtResource("27_apmp5")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 35, 0, 0)
+[node name="SwingDoor5" parent="Doors" unique_id=1226144837 instance=ExtResource("27_apmp5")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 44, 0, 0)
 
-[node name="SwingDoor6" parent="." unique_id=573261765 instance=ExtResource("27_apmp5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 0)
+[node name="SwingDoor6" parent="Doors" unique_id=573261765 instance=ExtResource("27_apmp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 0, 0)
 
-[node name="SwingDoor2" parent="." unique_id=326515091 instance=ExtResource("27_apmp5")]
+[node name="SwingDoor2" parent="Doors" unique_id=326515091 instance=ExtResource("27_apmp5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 190)
 
-[node name="SwingDoor3" parent="." unique_id=2062538664 instance=ExtResource("27_apmp5")]
+[node name="Sprite3D2" parent="Doors/SwingDoor2" index="1" unique_id=909850627]
+modulate = Color(0.47843137, 0.47843137, 0.47843137, 1)
+
+[node name="SwingDoor3" parent="Doors" unique_id=2062538664 instance=ExtResource("27_apmp5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 290)
 
-[node name="SwingDoor4" parent="." unique_id=1238055455 instance=ExtResource("27_apmp5")]
+[node name="SwingDoor4" parent="Doors" unique_id=1238055455 instance=ExtResource("27_apmp5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105, 0, 290)
+
+[node name="Music" type="Node" parent="." unique_id=1436702435]
+
+[node name="SchoolMusic" type="AudioStreamPlayer" parent="Music" unique_id=134419063]
+stream = ExtResource("29_0thes")
+autoplay = true
+bus = &"Music"
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1657116139]
+navigation_mesh = SubResource("NavigationMesh_xhp5c")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1896822566]
 environment = SubResource("Environment_xhp5c")
 
-[editable path="Entrance2"]
+[node name="PricipalDoor" parent="." unique_id=294371751 instance=ExtResource("36_ei6vo")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -25, 0, 160)
+
+[editable path="Entrences/EntranceWest"]
+[editable path="Windows/Window4"]
+[editable path="Doors/SwingDoor2"]

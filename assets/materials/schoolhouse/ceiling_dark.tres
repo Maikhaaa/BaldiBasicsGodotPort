@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cjdgomyroumv7"]
 
-[ext_resource type="Texture2D" uid="uid://bg8ve38tyb25q" path="res://assets/textures/school/CeilingTextures/Ceiling.png" id="1_qops4"]
+[ext_resource type="Texture2D" uid="uid://bg8ve38tyb25q" path="res://assets/textures/schoolhouse/CeilingTextures/Ceiling.png" id="1_qops4"]
 
 [resource]
 shading_mode = 0
