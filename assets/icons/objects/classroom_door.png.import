@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccy5c6aleees5"
-path.s3tc="res://.godot/imported/recyclefood.png-b43aa3f200e1d4ec221a7216b732b42f.s3tc.ctex"
+uid="uid://bwrnkgc0wagil"
+path.s3tc="res://.godot/imported/classroom_door.png-a578fd8fc2e0e26f29372ba7e8b350da.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/schoolhouse/WallTextures/Posters/recyclefood.png"
-dest_files=["res://.godot/imported/recyclefood.png-b43aa3f200e1d4ec221a7216b732b42f.s3tc.ctex"]
+source_file="res://assets/icons/objects/classroom_door.png"
+dest_files=["res://.godot/imported/classroom_door.png-a578fd8fc2e0e26f29372ba7e8b350da.s3tc.ctex"]
 
 [params]
 

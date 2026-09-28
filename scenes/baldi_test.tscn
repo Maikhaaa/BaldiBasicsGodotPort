@@ -3,8 +3,8 @@
 [ext_resource type="Material" uid="uid://dr5wm4rjqkjjo" path="res://assets/materials/schoolhouse/wall.tres" id="1_ty1ad"]
 [ext_resource type="Material" uid="uid://chs6yyg0mt5q7" path="res://assets/materials/schoolhouse/floor.tres" id="2_w8xfb"]
 [ext_resource type="Material" uid="uid://cmfnktlikxj5i" path="res://assets/materials/schoolhouse/ceiling.tres" id="3_amgam"]
-[ext_resource type="Texture2D" uid="uid://ca7eb6feg6n28" path="res://assets/textures/characters/Baldi/slap_sheet.png" id="4_amgam"]
 [ext_resource type="PackedScene" uid="uid://h5ivk5sbk7i7" path="res://actors/swing_door.tscn" id="4_kuv55"]
+[ext_resource type="PackedScene" uid="uid://cr8cyc5yrko6v" path="res://actors/baldi.tscn" id="5_amgam"]
 [ext_resource type="PackedScene" uid="uid://dyycw2prhuok3" path="res://actors/player.tscn" id="5_w8xfb"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_x5fd6"]
@@ -17,58 +17,6 @@ size = Vector2(10, 10)
 [sub_resource type="NavigationMesh" id="NavigationMesh_xhp5c"]
 vertices = PackedVector3Array(-4.5, 0.4995, -4.5, -4.5, 0.4995, 24.5, 34.5, 0.4995, 24.5, 34.5, 0.4995, -4.5)
 polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xhp5c"]
-radius = 1.0
-height = 5.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kuv55"]
-atlas = ExtResource("4_amgam")
-region = Rect2(0, 0, 106, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x5fd6"]
-atlas = ExtResource("4_amgam")
-region = Rect2(106, 0, 106, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6alx7"]
-atlas = ExtResource("4_amgam")
-region = Rect2(212, 0, 106, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nqc6m"]
-atlas = ExtResource("4_amgam")
-region = Rect2(318, 0, 106, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0reu8"]
-atlas = ExtResource("4_amgam")
-region = Rect2(424, 0, 106, 256)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xhp5c"]
-animations = [{
-"frames": [],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kuv55")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x5fd6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6alx7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nqc6m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0reu8")
-}],
-"loop": 1,
-"name": &"slap",
-"speed": 5.0
-}]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xhp5c"]
 size = Vector3(0.001, 10, 10)
@@ -273,23 +221,10 @@ size = Vector3(40, 0.001, 30)
 [node name="SwingDoor" parent="." unique_id=771899290 instance=ExtResource("4_kuv55")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 0, 25)
 
-[node name="Baldi" type="CharacterBody3D" parent="." unique_id=169492948]
+[node name="Baldi" parent="." unique_id=1950091726 node_paths=PackedStringArray("Target") instance=ExtResource("5_amgam")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0, 0)
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Baldi" unique_id=1746959560]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Baldi" unique_id=1381079336]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-shape = SubResource("CapsuleShape3D_xhp5c")
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Baldi" unique_id=1419554868]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 4, 0)
-billboard = 2
-texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_xhp5c")
-animation = &"slap"
-frame = 1
-frame_progress = 0.5251346
+Speed = 10.0
+Target = NodePath("../Player")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=479252638]
 
@@ -345,7 +280,7 @@ shape = SubResource("BoxShape3D_xhp5c")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 5, -5)
 shape = SubResource("BoxShape3D_xhp5c")
 
-[node name="Player" parent="." unique_id=358682472 node_paths=PackedStringArray("Camera") groups=["Player"] instance=ExtResource("5_w8xfb")]
+[node name="Player" parent="." unique_id=358682472 node_paths=PackedStringArray("Camera") instance=ExtResource("5_w8xfb")]
 transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 0, 5, 20)
 Camera = NodePath("Camera3D")
 

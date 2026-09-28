@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dm4n7ur7d67yl"]
+
+[ext_resource type="Texture2D" uid="uid://ccy5c6aleees5" path="res://assets/textures/schoolhouse/WallTextures/Posters/recyclefood.png" id="1_oibho"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_oibho")
+texture_filter = 0

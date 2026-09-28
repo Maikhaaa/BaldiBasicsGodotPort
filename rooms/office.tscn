@@ -12,6 +12,8 @@
 [ext_resource type="Material" uid="uid://brmkhawhgqqy7" path="res://assets/materials/schoolhouse/posters/bully_poster.tres" id="7_rh3i0"]
 [ext_resource type="Material" uid="uid://b38c12usfm66j" path="res://assets/materials/schoolhouse/posters/attention_poster.tres" id="8_4wjci"]
 [ext_resource type="Material" uid="uid://b6bww7jfniw8l" path="res://assets/materials/schoolhouse/posters/principal_poster.tres" id="10_4wjci"]
+[ext_resource type="PackedScene" uid="uid://ck150l5wgv1v5" path="res://objects/desk.tscn" id="13_gk8d0"]
+[ext_resource type="Texture2D" uid="uid://dwumvmkyf7fr5" path="res://assets/textures/schoolhouse/Billboards/Placements/Placements/Globe.png" id="14_4wjci"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_xhp5c"]
 size = Vector2(10, 10)
@@ -208,6 +210,7 @@ material_override = ExtResource("10_4wjci")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling" type="Node3D" parent="." unique_id=973089871]
+visible = false
 
 [node name="Ceiling" type="MeshInstance3D" parent="Ceiling" unique_id=59928761]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.999994, 9.999998, 40)
@@ -334,3 +337,91 @@ shape = SubResource("BoxShape3D_gk8d0")
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=668974228]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 35, 5, 14.999998)
 shape = SubResource("BoxShape3D_4wjci")
+
+[node name="Desk" parent="." unique_id=2084488833 instance=ExtResource("13_gk8d0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.96, 0, 37.5)
+
+[node name="Desk5" parent="." unique_id=2144934562 instance=ExtResource("13_gk8d0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 0, 25.5)
+
+[node name="Desk6" parent="." unique_id=1892413163 instance=ExtResource("13_gk8d0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1, 0, 4.5)
+
+[node name="Desk7" parent="." unique_id=19949148 instance=ExtResource("13_gk8d0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 19, 0, 4.5)
+
+[node name="Desk8" parent="." unique_id=560759198 instance=ExtResource("13_gk8d0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 29, 0, 4.5)
+
+[node name="Desk2" parent="." unique_id=204896778 instance=ExtResource("13_gk8d0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23, 0, 38.5)
+
+[node name="Desk3" parent="." unique_id=200023765 instance=ExtResource("13_gk8d0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23, 0, 27.5)
+
+[node name="Desk4" parent="." unique_id=504609631 instance=ExtResource("13_gk8d0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, 0, 27.5)
+
+[node name="Sprite3D4" type="Sprite3D" parent="." unique_id=938569452]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 5, 4.4, 4.5)
+billboard = 1
+double_sided = false
+texture_filter = 0
+texture = ExtResource("14_4wjci")
+region_rect = Rect2(258, 0, 254, 41)
+
+[node name="Sprite3D5" type="Sprite3D" parent="." unique_id=1477258513]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24, 4.4, 4.5)
+billboard = 1
+double_sided = false
+texture_filter = 0
+texture = ExtResource("14_4wjci")
+region_rect = Rect2(258, 0, 254, 41)
+
+[node name="Sprite3D6" type="Sprite3D" parent="." unique_id=1615493153]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 23, 4.4, 31.5)
+billboard = 1
+double_sided = false
+texture_filter = 0
+texture = ExtResource("14_4wjci")
+region_rect = Rect2(258, 0, 254, 41)
+
+[node name="Sprite3D7" type="Sprite3D" parent="." unique_id=487152716]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 23, 4.4, 42.5)
+billboard = 1
+double_sided = false
+texture_filter = 0
+texture = ExtResource("14_4wjci")
+region_rect = Rect2(258, 0, 254, 41)
+
+[node name="Sprite3D8" type="Sprite3D" parent="." unique_id=1432475710]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 19, 4.4, 37.5)
+billboard = 1
+double_sided = false
+texture_filter = 0
+texture = ExtResource("14_4wjci")
+region_rect = Rect2(258, 0, 254, 41)
+
+[node name="Sprite3D9" type="Sprite3D" parent="." unique_id=744603781]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 19, 4.4, 37.5)
+billboard = 1
+double_sided = false
+texture_filter = 0
+texture = ExtResource("14_4wjci")
+region_rect = Rect2(258, 0, 254, 41)
+
+[node name="Sprite3D10" type="Sprite3D" parent="." unique_id=2034031384]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 9, 4.4, 25.5)
+billboard = 1
+double_sided = false
+texture_filter = 0
+texture = ExtResource("14_4wjci")
+region_rect = Rect2(258, 0, 254, 41)
+
+[node name="Sprite3D11" type="Sprite3D" parent="." unique_id=212448430]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2, 4.4, 31.5)
+billboard = 1
+double_sided = false
+texture_filter = 0
+texture = ExtResource("14_4wjci")
+region_rect = Rect2(258, 0, 254, 41)

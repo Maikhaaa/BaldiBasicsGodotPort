@@ -10,6 +10,7 @@
 [ext_resource type="Material" uid="uid://detvv1icdmqe2" path="res://assets/materials/schoolhouse/what.tres" id="4_45q0c"]
 [ext_resource type="Material" uid="uid://cmfnktlikxj5i" path="res://assets/materials/schoolhouse/ceiling.tres" id="5_5dipq"]
 [ext_resource type="Material" uid="uid://cjdgomyroumv7" path="res://assets/materials/schoolhouse/ceiling_dark.tres" id="7_l0g4x"]
+[ext_resource type="Material" uid="uid://b38c12usfm66j" path="res://assets/materials/schoolhouse/posters/attention_poster.tres" id="8_ei6vo"]
 [ext_resource type="PackedScene" uid="uid://dsqenve07axi6" path="res://rooms/caffeteria.tscn" id="8_l0g4x"]
 [ext_resource type="PackedScene" uid="uid://cf7ss0vm16x1v" path="res://rooms/office.tscn" id="11_0acw8"]
 [ext_resource type="PackedScene" uid="uid://b6hsvahxpnipj" path="res://actors/entrance.tscn" id="11_pwjnd"]
@@ -19,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://bxcw4ylslkg47" path="res://rooms/geography_room.tscn" id="18_5xcpo"]
 [ext_resource type="PackedScene" uid="uid://k5o4jrifv65o" path="res://rooms/math_room.tscn" id="19_45q0c"]
 [ext_resource type="PackedScene" uid="uid://msxdl03qsagg" path="res://rooms/geology.tscn" id="20_0acw8"]
-[ext_resource type="PackedScene" uid="uid://ck150l5wgv1v5" path="res://objects/desk.tscn" id="20_74ygv"]
 [ext_resource type="PackedScene" uid="uid://dnm46utehsc3j" path="res://rooms/science_room.tscn" id="21_74ygv"]
 [ext_resource type="PackedScene" uid="uid://xylvikmoo1c7" path="res://rooms/english_room.tscn" id="22_ei6vo"]
 [ext_resource type="PackedScene" uid="uid://cr51u7vkdpxw7" path="res://rooms/history_room.tscn" id="23_ko6cp"]
@@ -731,12 +731,6 @@ size = Vector2(10, 10)
 flip_faces = true
 size = Vector2(10, 10)
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_xhp5c"]
-vertices = PackedVector3Array(-8.75, 0.5, -12.5, -11.75, 0.5, -9.75, -12.75, 0.5, -8, -2, 0.5, -8, -2.5, 0.5, -15, -6, 0.5, -14, 2.5, 0.5, -15, 2, 0.5, -8, 9.75, 0.5, -11.75, 6, 0.5, -14, 12.75, 0.5, -8, -14, 0.5, -6, -15, 0.5, -2.5, -8, 0.5, -2, -6.75, 0.5, -4.75, -12.75, 0.5, 8, -2, 0.5, 8, -4.75, 0.5, 6.75, -7.25, 0.5, 4, -14.75, 0.5, 3.75, -8, 0.5, 2, -4.75, 0.5, -6.75, 15, 0.5, -2.5, 14, 0.5, -6, 6.75, 0.5, -4.75, 8, 0.5, -2, 4.75, 0.5, -6.75, 7.25, 0.5, 4, 12.75, 0.5, 8, 14.75, 0.5, 3.75, 8, 0.5, 2, 4.75, 0.5, 6.75, 2, 0.5, 8, -11.75, 0.5, 9.75, -8.75, 0.5, 12.5, -6, 0.5, 14, -2.5, 0.5, 15, 2.5, 0.5, 15, 6, 0.5, 14, 9.75, 0.5, 11.75)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 5), PackedInt32Array(2, 5, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(7, 3, 6), PackedInt32Array(6, 3, 4), PackedInt32Array(9, 8, 6), PackedInt32Array(6, 8, 7), PackedInt32Array(7, 8, 10), PackedInt32Array(11, 2, 12), PackedInt32Array(12, 2, 13), PackedInt32Array(13, 2, 14), PackedInt32Array(17, 16, 15), PackedInt32Array(18, 17, 15), PackedInt32Array(18, 15, 20), PackedInt32Array(20, 15, 19), PackedInt32Array(13, 20, 12), PackedInt32Array(12, 20, 19), PackedInt32Array(21, 2, 3), PackedInt32Array(2, 21, 14), PackedInt32Array(23, 22, 10), PackedInt32Array(10, 22, 25), PackedInt32Array(10, 25, 24), PackedInt32Array(26, 7, 10), PackedInt32Array(24, 26, 10), PackedInt32Array(27, 30, 28), PackedInt32Array(28, 30, 29), PackedInt32Array(25, 22, 30), PackedInt32Array(30, 22, 29), PackedInt32Array(31, 28, 32), PackedInt32Array(28, 31, 27), PackedInt32Array(33, 15, 34), PackedInt32Array(34, 15, 35), PackedInt32Array(35, 15, 36), PackedInt32Array(36, 15, 16), PackedInt32Array(32, 37, 16), PackedInt32Array(16, 37, 36), PackedInt32Array(38, 37, 39), PackedInt32Array(39, 37, 32), PackedInt32Array(39, 32, 28)]
-sample_partition_type = 1
-geometry_parsed_geometry_type = 0
-
 [sub_resource type="Environment" id="Environment_xhp5c"]
 background_mode = 2
 sky = ExtResource("1_apmp5")
@@ -746,7 +740,6 @@ ambient_light_source = 3
 
 [node name="Player" parent="." unique_id=358682472 node_paths=PackedStringArray("Camera") instance=ExtResource("16_0thes")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 4, -10)
-collision_layer = 2
 MouseSensitivity = 0.001
 Camera = NodePath("Camera3D")
 
@@ -755,7 +748,7 @@ current = true
 fov = 60.0
 
 [node name="BaldiTutor" type="AnimatedSprite3D" parent="." unique_id=33661372]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 1.25, 4.5, 6)
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 1.25, 4.015, 6)
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_xhp5c")
@@ -781,6 +774,7 @@ shape = SubResource("WorldBoundaryShape3D_xhp5c")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 10, 190)
 stream = ExtResource("3_l0g4x")
 autoplay = true
+max_distance = 20.0
 
 [node name="Walls" type="Node3D" parent="Hallways" unique_id=1696904357]
 
@@ -2046,7 +2040,7 @@ mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall331" type="MeshInstance3D" parent="Hallways/Walls" unique_id=1043331135]
 transform = Transform3D(-1, 0, -2.6226832e-07, 0, 1, 0, 2.6226832e-07, 0, -1, -70, 5, 335)
-material_override = ExtResource("1_f3k1l")
+material_override = ExtResource("8_ei6vo")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall332" type="MeshInstance3D" parent="Hallways/Walls" unique_id=1294523914]
@@ -4411,9 +4405,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 
 [node name="HistoryRoom" parent="Classrooms" unique_id=1323784066 instance=ExtResource("23_ko6cp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 0, 250)
 
-[node name="Desk" parent="Classrooms" unique_id=2084488833 instance=ExtResource("20_74ygv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 8)
-
 [node name="Faculty" type="Node" parent="." unique_id=2069432321]
 
 [node name="FacultyRoom" parent="Faculty" unique_id=435733651 instance=ExtResource("24_buyi3")]
@@ -4498,11 +4489,17 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 80, 
 [node name="SwingDoor" parent="Doors" unique_id=1554566880 instance=ExtResource("27_apmp5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 45)
 
+[node name="SwingDoor7" parent="Doors" unique_id=1114595226 instance=ExtResource("27_apmp5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -30, 0, 196)
+
 [node name="SwingDoor5" parent="Doors" unique_id=1226144837 instance=ExtResource("27_apmp5")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 44, 0, 0)
 
 [node name="SwingDoor6" parent="Doors" unique_id=573261765 instance=ExtResource("27_apmp5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 0, 0)
+
+[node name="SwingDoor8" parent="Doors" unique_id=1043667246 instance=ExtResource("27_apmp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 0, 330)
 
 [node name="SwingDoor2" parent="Doors" unique_id=326515091 instance=ExtResource("27_apmp5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 190)
@@ -4522,9 +4519,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105, 0, 290)
 stream = ExtResource("29_0thes")
 autoplay = true
 bus = &"Music"
-
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1657116139]
-navigation_mesh = SubResource("NavigationMesh_xhp5c")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1896822566]
 environment = SubResource("Environment_xhp5c")

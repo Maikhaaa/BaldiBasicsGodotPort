@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://cr8cyc5yrko6v"]
+
+[ext_resource type="Script" uid="uid://b2osul6jcaw5l" path="res://scripts/npc/Npc.cs" id="1_avllr"]
+[ext_resource type="Texture2D" uid="uid://ca7eb6feg6n28" path="res://assets/textures/characters/Baldi/slap_sheet.png" id="2_n2ssf"]
+[ext_resource type="AudioStream" uid="uid://bqormc4q3d5um" path="res://assets/sounds/characters/Baldi/Sounds/BAL_Slap.wav" id="3_n2ssf"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xhp5c"]
+radius = 1.0
+height = 5.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuv55"]
+atlas = ExtResource("2_n2ssf")
+region = Rect2(0, 0, 106, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5fd6"]
+atlas = ExtResource("2_n2ssf")
+region = Rect2(106, 0, 106, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6alx7"]
+atlas = ExtResource("2_n2ssf")
+region = Rect2(212, 0, 106, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqc6m"]
+atlas = ExtResource("2_n2ssf")
+region = Rect2(318, 0, 106, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0reu8"]
+atlas = ExtResource("2_n2ssf")
+region = Rect2(424, 0, 106, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xhp5c"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuv55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5fd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6alx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqc6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0reu8")
+}],
+"loop": 1,
+"name": &"slap",
+"speed": 5.0
+}]
+
+[node name="Baldi" type="CharacterBody3D" unique_id=1950091726 node_paths=PackedStringArray("NavAgent", "SlapAudio")]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_avllr")
+NavAgent = NodePath("NavigationAgent3D")
+SlapAudio = NodePath("AudioStreamPlayer3D")
+Speed = 75.0
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=958109134]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=405643918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+shape = SubResource("CapsuleShape3D_xhp5c")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1199018741]
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 0, 4.015, 0)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_xhp5c")
+animation = &"slap"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1853153733]
+stream = ExtResource("3_n2ssf")
+
+[node name="Cooldown" type="Timer" parent="." unique_id=16376843]
+wait_time = 2.132
+one_shot = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1856337869]
+wait_time = 2.132
+one_shot = true

@@ -3,6 +3,7 @@
 [ext_resource type="Material" uid="uid://chs6yyg0mt5q7" path="res://assets/materials/schoolhouse/floor.tres" id="1_7a2j8"]
 [ext_resource type="Material" uid="uid://dr5wm4rjqkjjo" path="res://assets/materials/schoolhouse/wall.tres" id="2_x7ti4"]
 [ext_resource type="Texture2D" uid="uid://bbfvr64w3twsw" path="res://assets/textures/schoolhouse/WallTextures/WallFade.png" id="3_t3xr1"]
+[ext_resource type="Material" uid="uid://dm4n7ur7d67yl" path="res://assets/materials/schoolhouse/posters/recycle_food_poster.tres" id="4_t3xr1"]
 [ext_resource type="AudioStream" uid="uid://damafbktbhbq" path="res://assets/sounds/sounds/Ambiences/ambience.wav" id="4_x7ti4"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_xhp5c"]
@@ -1453,7 +1454,7 @@ mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall264" type="MeshInstance3D" parent="Walls" unique_id=1926701139]
 transform = Transform3D(1.3113416e-07, 0, -1, -1, -4.371139e-08, -1.3113416e-07, -4.371139e-08, 1, -5.732056e-15, 115.00001, -50, 4.9999957)
-material_override = ExtResource("2_x7ti4")
+material_override = ExtResource("4_t3xr1")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall266" type="MeshInstance3D" parent="Walls" unique_id=377287777]
@@ -1493,7 +1494,7 @@ mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall273" type="MeshInstance3D" parent="Walls" unique_id=156056765]
 transform = Transform3D(-2.1855693e-07, 0, 1, 1, -4.371139e-08, 2.1855693e-07, 4.371139e-08, 1, 9.553427e-15, -15.000004, -30, 4.9999967)
-material_override = ExtResource("2_x7ti4")
+material_override = ExtResource("4_t3xr1")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall275" type="MeshInstance3D" parent="Walls" unique_id=982714807]
@@ -1518,7 +1519,7 @@ mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall279" type="MeshInstance3D" parent="Walls" unique_id=1432127687]
 transform = Transform3D(-1, 0, -2.6226832e-07, -2.6226832e-07, -4.3711385e-08, 1, -7.911399e-15, 1, 4.371139e-08, 80, -85, 5.000004)
-material_override = ExtResource("2_x7ti4")
+material_override = ExtResource("4_t3xr1")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Wall280" type="MeshInstance3D" parent="Walls" unique_id=232614069]

@@ -1,0 +1,16 @@
+[gd_resource type="Theme" format=3 uid="uid://b141mcx8nosql"]
+
+[ext_resource type="FontFile" uid="uid://ccdmb0cvpadlp" path="res://assets/COMIC.ttf" id="1_vs6sg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsp32"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dd0qc"]
+bg_color = Color(0, 1, 0, 1)
+
+[resource]
+default_font = ExtResource("1_vs6sg")
+ProgressBar/font_sizes/font_size = 16
+ProgressBar/fonts/font = ExtResource("1_vs6sg")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_qsp32")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_dd0qc")

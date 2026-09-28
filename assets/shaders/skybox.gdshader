@@ -1,6 +1,5 @@
 shader_type sky;
 
-// Drag your 6 separate square textures into these slots in the Inspector!
 uniform sampler2D right_tex : source_color, filter_nearest;
 uniform sampler2D left_tex : source_color, filter_nearest;
 uniform sampler2D top_tex : source_color, filter_nearest;
@@ -9,12 +8,10 @@ uniform sampler2D back_tex : source_color, filter_nearest;
 uniform sampler2D front_tex : source_color, filter_nearest;
 
 uniform bool flip_x = false;
-uniform bool flip_y = true; // Set to true by default as Y is usually inverted in 3D sky projection
+uniform bool flip_y = true;
 
-// Y-axis rotation angle in degrees (adjust in Inspector or script)
 uniform float sky_rotation_y : hint_range(0.0, 360.0) = 0.0;
 
-// Function to rotate a 3D vector around the Y-axis
 vec3 rotate_y(vec3 v, float angle_deg) {
     float rad = radians(angle_deg);
     float cos_a = cos(rad);
@@ -26,7 +23,6 @@ vec3 rotate_y(vec3 v, float angle_deg) {
     );
 }
 
-// Helper function to handle flipping logic
 vec2 apply_flips(vec2 in_uv) {
     vec2 res = in_uv;
     if (flip_x) {
@@ -39,7 +35,6 @@ vec2 apply_flips(vec2 in_uv) {
 }
 
 void sky() {
-    // 1. Rotate the camera view direction around the Y axis
     vec3 dir = rotate_y(EYEDIR, sky_rotation_y);
     vec3 abs_dir = abs(dir);
     
