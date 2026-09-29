@@ -210,7 +210,6 @@ material_override = ExtResource("10_4wjci")
 mesh = SubResource("QuadMesh_xhp5c")
 
 [node name="Ceiling" type="Node3D" parent="." unique_id=973089871]
-visible = false
 
 [node name="Ceiling" type="MeshInstance3D" parent="Ceiling" unique_id=59928761]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.999994, 9.999998, 40)

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bpl442upwx6th" path="res://scripts/player/PlayerController.cs" id="1_niuxy"]
 [ext_resource type="Theme" uid="uid://b141mcx8nosql" path="res://assets/themes/progress_bar/default_progress_bar.tres" id="2_mvpqy"]
+[ext_resource type="Script" uid="uid://becm5g0wk40kw" path="res://scripts/modules/StaminaModule.cs" id="3_1yqc4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xhp5c"]
 radius = 1.9
@@ -15,12 +16,14 @@ albedo_color = Color(1, 0.49411765, 0, 0.4392157)
 radius = 1.9
 height = 10.0
 
-[node name="Player" type="CharacterBody3D" unique_id=358682472 groups=["Player"]]
+[node name="Player" type="CharacterBody3D" unique_id=358682472 node_paths=PackedStringArray("Stamina") groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_niuxy")
 MouseSensitivity = 0.002
 WalkSpeed = 10.0
 RunSpeed = 16.0
+TiredSpeed = 4.0
+Stamina = NodePath("StaminaModule")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=529004980]
 shape = SubResource("CapsuleShape3D_xhp5c")
@@ -47,27 +50,16 @@ size_flags_vertical = 4
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Control" type="Control" parent="." unique_id=973514923]
-layout_mode = 3
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
-grow_horizontal = 2
-
-[node name="ProgressBar" type="ProgressBar" parent="Control" unique_id=1749147930]
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1749147930]
 texture_filter = 1
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -160.0
-offset_top = -12.0
-offset_bottom = -2.0
+offset_top = -316.0
+offset_bottom = -306.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
@@ -75,7 +67,7 @@ theme = ExtResource("2_mvpqy")
 value = 100.0
 show_percentage = false
 
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1490310566]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="StaminaModule" type="Node" parent="." unique_id=316145654 node_paths=PackedStringArray("ProgressBar")]
+script = ExtResource("3_1yqc4")
+ProgressBar = NodePath("../ProgressBar")
+metadata/_custom_type_script = "uid://becm5g0wk40kw"

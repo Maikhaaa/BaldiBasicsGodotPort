@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dk7rrnwvsy6mc"]
 
-[ext_resource type="Texture2D" uid="uid://c6pjomhnwe61f" path="res://assets/textures/schoolhouse/PickUps/NotebookSprite.png" id="1_etfwr"]
+[ext_resource type="Texture2D" uid="uid://c6pjomhnwe61f" path="res://assets/icons/pickups/NotebookSprite.png" id="1_etfwr"]
 [ext_resource type="Script" uid="uid://dvgx3g6csde5p" path="res://scripts/modules/ClickObjectModule.cs" id="2_c6lix"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_etfwr"]

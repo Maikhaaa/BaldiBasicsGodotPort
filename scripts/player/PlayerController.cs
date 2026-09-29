@@ -1,31 +1,27 @@
 using Godot;
 using System;
 
-[Icon("res://assets/icons/player.png")]
-public partial class PlayerController : CharacterBody3D
-{
-
+[Icon("res://assets/icons/characters/player.png")]
+public partial class PlayerController : CharacterBody3D {
 	[Export]
 	public float MouseSensitivity = 1.0f;
 	[Export]
-	public Camera3D Camera;
+	public Camera3D _Camera;
 
 	[Export]
 	public float WalkSpeed;
 	[Export]
 	public float RunSpeed;
+	[Export]
+	public float TiredSpeed;
 	
 	private float speed;
 	
 	[Export]
-	public float MaxStamina = 100.0f;
-	[Export]
-	public float StaminaRate = 10.0f;
+	public StaminaModule Stamina;
 
-	private float stamina;
 
 	public override void _Ready() {
-		speed = WalkSpeed;
 		_LockMouse();
 	}
 
@@ -38,20 +34,17 @@ public partial class PlayerController : CharacterBody3D
 
 	public override void _PhysicsProcess(double delta) {
 		Vector3 velocity = Velocity;
-		var magnitude = Vector3.Zero.DistanceTo(velocity);
-		if (magnitude > 0.1f) {
-			if (Input.IsActionPressed("sprint")) {
-				stamina -= StaminaRate * (float)delta;
-			}
-			if (stamina < 0f & stamina > 5f){
-				stamina = -5f;
-			}
-		} else if (stamina < MaxStamina) {
-			stamina += StaminaRate * (float)delta;
+		
+		if (Stamina.IsNotDepleted()) {
+			speed = (Input.IsActionPressed("sprint")) ? RunSpeed : WalkSpeed;
+		} else {
+			speed = TiredSpeed;
 		}
-	
-		speed = (Input.IsActionPressed("sprint")) ? RunSpeed : WalkSpeed;
-	
+		
+		if (Stamina != null) {
+			_handleStamina();
+		}
+
 		Vector2 inputDir = Input.GetVector("left", "right", "forward", "backward");
 		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
 		
@@ -68,14 +61,25 @@ public partial class PlayerController : CharacterBody3D
 		MoveAndSlide();
 
 		if (Input.IsActionPressed("look_behind")) {
-			Camera.Rotation = new Vector3(0.0f, Mathf.Pi, 0.0f);
+			_Camera.Rotation = new Vector3(0.0f, Mathf.Pi, 0.0f);
 		}else {
-			Camera.Rotation = new Vector3(0.0f, 0.0f, 0.0f);
+			_Camera.Rotation = new Vector3(0.0f, 0.0f, 0.0f);
 		}
 	}
 
 
 	private void _LockMouse() {
 		Input.MouseMode = Input.MouseModeEnum.Captured;
+	}
+
+	private void _handleStamina() {
+		var magnitude = Vector3.Zero.DistanceTo(Velocity);
+		if (magnitude > 0.1f) {
+			if (Input.IsActionPressed("sprint")) {
+				Stamina.Decrease();
+			}
+		} else if (Stamina.IsNotFull()) {
+			Stamina.Increase();
+		}
 	}
 }

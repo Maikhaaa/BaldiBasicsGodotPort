@@ -13,7 +13,6 @@ config_version=5
 config/name="baldis basics port"
 run/main_scene="uid://cfk6skjax7wep"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
-config/icon="res://icon.svg"
 
 [audio]
 
